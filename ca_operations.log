@@ -1,0 +1,1342 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:35:54] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:35:54] "[35m[1mGET /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:35:54] "GET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:35:54] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:35:54] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=24H62Gl87QYhOM8Hoab6 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/auth.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:36:47] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:36:47] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:36:47] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:36:51] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:36:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:36:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:36:53] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:36:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:36:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:36:54] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:36:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:36:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:37:26] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:37:26] "GET /auth/register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:37:26] "GET /auth/register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:37:26] "GET /auth/register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:37:26] "GET /auth/register?__debugger__=yes&cmd=resource&f=console.png&s=H904RMFxWFLaVkK3jlqD HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:40:51] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:40:51] "GET /auth/register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:40:51] "[36mGET /auth/register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:40:51] "GET /auth/register?__debugger__=yes&cmd=resource&f=console.png&s=BfUMEMEHzKgBWqJJxMyz HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:41:28] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:41:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:42:09] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:42:09] "[36mGET /auth/register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:42:09] "GET /auth/register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:42:09] "GET /auth/register?__debugger__=yes&cmd=resource&f=console.png&s=QvPj7dClLJMVPnUmYLS4 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:45:01] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:45:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:45:32] "[36mGET /auth/register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:45:32] "[36mGET /auth/register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:45:32] "GET /auth/register?__debugger__=yes&cmd=resource&f=console.png&s=mGISKu9sPCZlbMck6Ab4 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:46:22] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:46:22] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:46:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:46:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:46:24] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:46:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:46:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:46:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:46:56] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:46:56] "GET /auth/register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:46:56] "[36mGET /auth/register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:46:56] "GET /auth/register?__debugger__=yes&cmd=resource&f=console.png&s=pzvUmmVh56vUV8Yh36Rd HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:09] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:09] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:10] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:11] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:13] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:13] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:33] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:42] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:44] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:44] "GET /auth/register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:44] "[36mGET /auth/register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:50:44] "GET /auth/register?__debugger__=yes&cmd=resource&f=console.png&s=nxDosCg8MrpoZdmwUkU2 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:51:18] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:51:18] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:51:22] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:51:22] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:51:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:51:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:51:23] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:51:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:51:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:52:55] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:52:55] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:52:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:52:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:52:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:52:56] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:52:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:52:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:52:58] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:52:58] "GET /auth/register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:52:58] "[36mGET /auth/register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:52:58] "GET /auth/register?__debugger__=yes&cmd=resource&f=console.png&s=TP4l2ZpkpDCYefX6YrBi HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:38] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:38] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:38] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:38] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:39] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:42] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:42] "[36mGET /auth/register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:42] "[36mGET /auth/register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:42] "GET /auth/register?__debugger__=yes&cmd=resource&f=console.png&s=1Sc03rUwxHqUhB5l3Ann HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:44] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:47] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:47] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:47] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:48] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:48] "GET /auth/register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:48] "[36mGET /auth/register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:48] "GET /auth/register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:53:48] "GET /auth/register?__debugger__=yes&cmd=resource&f=console.png&s=BTz39Mh8j9k8gzGFQycZ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:07] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:07] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:09] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:09] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:10] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:10] "[36mGET /auth/register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:10] "[36mGET /auth/register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:10] "GET /auth/register?__debugger__=yes&cmd=resource&f=console.png&s=XOGM686A0mMwR1vJU7Tj HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:44] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:44] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:46] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:47] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:47] "[36mGET /auth/register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:47] "[36mGET /auth/register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:54:47] "GET /auth/register?__debugger__=yes&cmd=resource&f=console.png&s=iOXYtiB6Cglz623Koq1Y HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:56:22] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:56:22] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:56:24] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:56:24] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:56:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:56:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:56:41] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:56:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:56:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:56:42] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:56:42] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:56:42] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:56:42] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=3toHswHqHruC6KcNPV2G HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/auth.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:57:15] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:57:17] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 21:57:17] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/dashboard.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:01:44] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:01:44] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:01:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:01:44] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:01:53] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:01:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:01:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:03:35] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:03:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:03:35] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:07:27] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:07:27] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:07:27] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:07:27] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:07:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:07:28] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:07:29] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:07:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:07:29] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:07:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:08:10] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:08:19] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:08:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:08:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:08:22] "GET /api/get-all-certs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:08:23] "GET /api/get-all-certs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:08:24] "GET /api/get-all-certs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:08:24] "GET /api/get-all-certs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:08:24] "GET /api/get-all-certs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:08:24] "GET /api/get-all-certs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:08:25] "GET /api/get-all-certs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:08:26] "[33mGET /api/get-cert/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:08:26] "GET /api/get-all-certs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:24] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:24] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:27] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:27] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:33] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:33] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:35] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:35] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:39] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:39] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:41] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:45] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:45] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:48] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:48] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:11:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:12:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:12:23] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:12:24] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:12:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:12:24] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:12:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:12:30] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:12:31] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:12:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:12:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:12:38] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:12:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:12:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:12:51] "[35m[1mPOST /api/ca/init HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:12:55] "[35m[1mPOST /api/ca/init HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:07] "[35m[1mPOST /api/ca/sign-csr HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:10] "[35m[1mPOST /api/ca/sign-csr HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:12] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:12] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:12] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:17] "[33mGET /api/get-cert/gov1 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:24] "GET /api/get-cert/finance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:28] "GET /api/get-all-certs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:31] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:52] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:53] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:54] "GET /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:13:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:14:14] "POST /api/generate-keypair HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:14:18] "[33mGET /storage/pfx/gov1.pfx HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:14:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:14:36] "GET /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:14:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:14:36] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:14:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:14:43] "POST /api/generate-csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:14:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:14:54] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:14:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:14:54] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:14:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:14:56] "[33mGET /api/get-cert/gov1 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:15:00] "GET /api/get-cert/finance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:15:00] "GET /api/get-all-certs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:15:51] "GET /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:15:52] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:15:52] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:15:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:15:57] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:15:57] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:15:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:15:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:16:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:16:00] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:16:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:16:00] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:16:01] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:16:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:16:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:16:27] "[35m[1mPOST /api/ca/sign-csr HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:16:29] "[35m[1mPOST /api/ca/sign-csr HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:16:33] "[35m[1mPOST /api/ca/sign-csr HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:16:33] "[35m[1mPOST /api/ca/sign-csr HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:16:58] "[35m[1mPOST /api/ca/sign-csr HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:17:29] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:17:29] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:17:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:17:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:17:36] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:17:37] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:17:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:17:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:17:42] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:17:42] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:17:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:17:45] "GET /api/get-cert/gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:17:45] "GET /api/get-all-certs HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:25:29] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:25:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:25:29] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:25:36] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:25:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:25:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:25:47] "[35m[1mPOST /api/ca/init HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:25:55] "[35m[1mPOST /api/ca/sign-csr HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:26:00] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:26:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:26:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:26:03] "GET /api/get-cert/gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:26:13] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:26:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:26:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:26:20] "[35m[1mPOST /api/ca/revoke-cert HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/lookup.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:30:01] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:30:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:30:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:30:06] "[35m[1mGET /cert-lookup HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:30:06] "GET /cert-lookup?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:30:06] "GET /cert-lookup?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:30:06] "GET /cert-lookup?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:30:06] "GET /cert-lookup?__debugger__=yes&cmd=resource&f=console.png&s=a1eY3fu43SRdaAkapxbD HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:31:27] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:31:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:31:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:31:28] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:31:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:31:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:31:32] "POST /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:31:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:31:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:31:33] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:31:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:31:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:33:22] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:33:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:33:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:33:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:33:23] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:33:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:33:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:33:27] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:33:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:33:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/csr.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/lookup.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:35:26] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:35:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:35:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:35:27] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:35:29] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:35:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:35:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:35:33] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:35:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:35:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/crl.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/lookup.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:22] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:22] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:22] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:28] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:30] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:33] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:36] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:36] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:37] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:38] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:40] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:40] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:42] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:39:53] "[31m[1mPOST /api/ca/sign-csr HTTP/1.1[0m" 415 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:41:23] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:41:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:41:23] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:41:35] "[31m[1mPOST /api/ca/revoke-cert HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:41:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:41:42] "[31m[1mPOST /api/ca/revoke-cert HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:41:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:43:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:43:31] "[31m[1mPOST /api/ca/revoke-cert HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:43:45] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:43:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:43:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:45:39] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:45:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:45:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:46:26] "[35m[1mPOST /api/ca/init HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:48:35] "[35m[1mPOST /api/ca/init HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:48:38] "[35m[1mPOST /api/ca/init HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:48:43] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:48:44] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:48:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:48:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:48:50] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:48:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:48:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:48:54] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:48:54] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:48:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:48:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:49:41] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:49:41] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:49:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:49:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:49:43] "GET /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:49:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:49:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:49:51] "POST /api/generate-keypair HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:49:53] "[33mGET /storage/pfx/gov2.pfx HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:49:59] "GET /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:49:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:49:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:07] "POST /api/generate-csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:10] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:13] "GET /api/get-cert/gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:14] "GET /api/get-all-certs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:15] "GET /api/get-all-certs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:15] "GET /api/get-all-certs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:15] "GET /api/get-all-certs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:15] "GET /api/get-all-certs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:50] "[35m[1mGET /cert-lookup HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:50] "[36mGET /cert-lookup?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:50] "[36mGET /cert-lookup?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:50] "GET /cert-lookup?__debugger__=yes&cmd=resource&f=console.png&s=7HHnx7BIBWhy8UrBCTDG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:55] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:57] "POST /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:50:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:03] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:04] "POST /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:05] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:07] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:08] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:08] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:11] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:11] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:48] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:51:56] "[35m[1mPOST /api/ca/init HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:52:42] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:52:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:52:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:52:44] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:52:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:52:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:52:57] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:52:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:52:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:52:58] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:52:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:52:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:53:01] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:53:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:53:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:53:03] "[35m[1mPOST /api/ca/init HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:59:09] "[35m[1mPOST /api/ca/sign-csr HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:59:09] "[35m[1mPOST /api/ca/sign-csr HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:59:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:59:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:59:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:59:22] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:59:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:59:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:59:29] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:59:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 22:59:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:00:19] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:00:29] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:00:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:00:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:01:53] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:02:01] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:02:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:02:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:03:37] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:03:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:03:45] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:03:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:03:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:03:57] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:03:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:03:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:03:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:05:52] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:05:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:05:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:05:58] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:05:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:05:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:06:07] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:06:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:06:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:07:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:07:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:07:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:07:32] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:07:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:07:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:07:44] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:07:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:07:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:09:49] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:09:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:09:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:09:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:12:36] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:12:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:12:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:12:43] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:12:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:12:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:13:53] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:13:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:13:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:14:00] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:14:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:14:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:15:48] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:15:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:15:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:15:52] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:15:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:15:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:16:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:16:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:16:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:16:55] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:16:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:16:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:17:02] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:17:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:17:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:18:01] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:18:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:18:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:18:05] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:18:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:18:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:18:25] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:18:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:18:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:18:56] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:18:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:18:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:18:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.109:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:24:18] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:24:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:24:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:24:57] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:24:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:24:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:25:20] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:25:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:25:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.109:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:27:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:27:07] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:27:07] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:27:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:27:16] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:27:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:27:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:27:22] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:27:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:27:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.109:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:28:26] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:28:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:28:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/csr.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/crl.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/crl.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/ca.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:03] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:03] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:08] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:09] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:17] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:32] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:32] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:37] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:37] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:42] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:45] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:48] "POST /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:31:52] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:32:10] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:32:10] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:32:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:32:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.109:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:41] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:41] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:47] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:48] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:50] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:54] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:54] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:55] "GET /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:59] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:59] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:37:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:38:20] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:38:20] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:38:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:38:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:38:22] "GET /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:38:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:38:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:38:28] "POST /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:38:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:38:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/keygen.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/keygen.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:39:00] "POST /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:39:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:39:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/keygen.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:39:18] "POST /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:39:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:39:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/keygen.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:40:57] "POST /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:40:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:40:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:41:02] "GET /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:41:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:41:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:41:07] "POST /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:41:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:41:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/csr.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:41:38] "POST /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:41:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:41:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/csr.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:42:03] "POST /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:42:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:42:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:42:06] "[35m[1mGET /cert-lookup HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:42:06] "GET /cert-lookup?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:42:06] "GET /cert-lookup?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:42:06] "GET /cert-lookup?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:42:06] "GET /cert-lookup?__debugger__=yes&cmd=resource&f=console.png&s=9Hpk9EDDQGkp05BPMAoB HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:43:14] "[35m[1mGET /cert-lookup HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:43:14] "[36mGET /cert-lookup?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:43:14] "[36mGET /cert-lookup?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:43:14] "GET /cert-lookup?__debugger__=yes&cmd=resource&f=console.png&s=xuTb21CxQNQweCM3MroL HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.109:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:48] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:54] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:55] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:55] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:56] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:56] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:45:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/lookup.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:50:40] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:50:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:50:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219-pki-project/lookup.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-145-734
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:22] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:25] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:25] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:30] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:31] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:33] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:35] "GET /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:35] "GET /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:39] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:39] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:41] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:41] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:43] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:51:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:52:04] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:52:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:52:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:52:09] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:52:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:52:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:52:19] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:52:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/May/2025 23:52:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://10.45.218.202:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 697-535-186
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:14:19] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:14:20] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:14:20] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:14:20] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:15:19] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:15:19] "GET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:15:19] "GET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:15:19] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:15:19] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=LyiNEpflIoGHxIFMivRE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:15:25] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:15:25] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:15:59] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:15:59] "GET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:15:59] "GET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:15:59] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=LyiNEpflIoGHxIFMivRE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:16:27] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:16:55] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://10.45.218.202:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 697-535-186
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:18:17] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:18:17] "GET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:18:17] "GET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:18:17] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=44tiqp5KmS7QZcQXTBYP HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://10.45.218.202:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 697-535-186
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:03] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:03] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:03] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:06] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:08] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:29] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:33] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:45] "GET /cert-lookup?org_id= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:46] "GET /cert-lookup?org_id= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:20:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:12] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:18] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:18] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:33] "GET /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:34] "GET /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:36] "GET /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:37] "GET /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:38] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:21:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:23:29] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:23:30] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:23:36] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:23:36] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:23:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:23:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:23:45] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:23:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:23:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:24:00] "[32mGET /keygen HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:24:00] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:24:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:24:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:24:05] "[32mGET /keygen HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:24:05] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:24:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:24:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:24:09] "[32mGET /csr HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:24:09] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:24:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2025 09:24:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -

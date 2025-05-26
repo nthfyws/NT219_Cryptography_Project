@@ -1,0 +1,50 @@
+body {
+    padding-top: 20px;
+    background-color: #f8f9fa;
+}
+
+.card {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+pre {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #dee2e6;
+}
+
+textarea.form-control {
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+/* Dashboard specific styles */
+.card-header h5, .card-header h6 {
+    margin-bottom: 0;
+}
+
+.list-group-item {
+    padding: 0.75rem 1.25rem;
+}
+
+.badge {
+    font-size: 0.9em;
+    padding: 0.35em 0.65em;
+}
+
+/* Activity log styles */
+.text-success {
+    color: #198754 !important;
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}

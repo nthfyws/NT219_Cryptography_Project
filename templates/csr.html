@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Generate CSR{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h4>Generate Certificate Signing Request (CSR)</h4>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="{{ url_for('csr_page') }}">
+            <div class="mb-3">
+                <label for="orgInfo" class="form-label">Organization Information</label>
+                <input type="text" class="form-control" id="orgInfo" name="org_info" required>
+            </div>
+            <div class="mb-3">
+                <label for="passphrase" class="form-label">PFX Passphrase</label>
+                <input type="password" class="form-control" id="passphrase" name="passphrase" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate CSR</button>
+        </form>
+
+        {% if csr_data %}
+        <div class="mt-3">
+            <div class="alert alert-success">
+                CSR generated successfully!
+            </div>
+            <div class="mb-3">
+                <label class="form-label">CSR (Base64):</label>
+                <textarea class="form-control" rows="5" readonly>{{ csr_data }}</textarea>
+            </div>
+            <button onclick="copyToClipboard(this)" class="btn btn-secondary">Copy to Clipboard</button>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+function copyToClipboard(button) {
+    const textarea = button.previousElementSibling.querySelector('textarea');
+    textarea.select();
+    document.execCommand('copy');
+    alert('Copied to clipboard!');
+}
+</script>
+{% endblock %}

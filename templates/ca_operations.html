@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% block title %}CA Operations{% endblock %}
+
+{% block content %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }} mt-2">{{ message|safe }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<div class="card">
+    <div class="card-header">
+        <h4>Certificate Authority Operations</h4>
+    </div>
+    <div class="card-body">
+        <ul class="nav nav-tabs" id="caTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="init-tab" data-bs-toggle="tab" data-bs-target="#init" type="button">Initialize CA</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="sign-tab" data-bs-toggle="tab" data-bs-target="#sign" type="button">Sign CSR</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="revoke-tab" data-bs-toggle="tab" data-bs-target="#revoke" type="button">Revoke Certificate</button>
+            </li>
+        </ul>
+        
+        <div class="tab-content mt-3" id="caTabsContent">
+            <!-- Initialize CA -->
+            <div class="tab-pane fade show active" id="init" role="tabpanel">
+                <form method="POST" action="{{ url_for('ca_operations_page') }}">
+                    <input type="hidden" name="action" value="init_ca">
+                    <div class="mb-3">
+                        <label for="caPassphrase" class="form-label">CA Passphrase</label>
+                        <input type="password" class="form-control" id="caPassphrase" name="passphrase" minlength="12" required>
+                        <div class="form-text">Must be at least 12 characters long</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Initialize CA</button>
+                </form>
+            </div>
+            
+            <!-- Sign CSR -->
+            <div class="tab-pane fade" id="sign" role="tabpanel">
+                <form method="POST" action="{{ url_for('ca_operations_page') }}">
+                    <input type="hidden" name="action" value="sign_csr">
+                    <div class="mb-3">
+                        <label for="signOrgInfo" class="form-label">Organization Information</label>
+                        <input type="text" class="form-control" id="signOrgInfo" name="org_info" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="signPassphrase" class="form-label">CA Passphrase</label>
+                        <input type="password" class="form-control" id="signPassphrase" name="passphrase" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign CSR</button>
+                </form>
+            </div>
+            
+            <!-- Revoke Certificate -->
+            <div class="tab-pane fade" id="revoke" role="tabpanel">
+                <form method="POST" action="{{ url_for('ca_operations_page') }}">
+                    <input type="hidden" name="action" value="revoke_cert">
+                    <div class="mb-3">
+                        <label for="revokeOrgInfo" class="form-label">Organization Information</label>
+                        <input type="text" class="form-control" id="revokeOrgInfo" name="org_info" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="revokePassphrase" class="form-label">CA Passphrase</label>
+                        <input type="password" class="form-control" id="revokePassphrase" name="passphrase" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="revokeReason" class="form-label">Revocation Reason</label>
+                        <select class="form-select" id="revokeReason" name="reason">
+                            <option value="unspecified">Unspecified</option>
+                            <option value="keyCompromise">Key Compromise</option>
+                            <option value="affiliationChanged">Affiliation Changed</option>
+                            <option value="superseded">Superseded</option>
+                            <option value="cessationOfOperation">Cessation of Operation</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Revoke Certificate</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if ca_cert %}
+<div class="mb-3">
+    <label class="form-label">CA Certificate:</label>
+    <pre>{{ ca_cert }}</pre>
+</div>
+{% endif %}
+{% if cert_base64 %}
+<div class="mb-3">
+    <label class="form-label">Certificate (Base64):</label>
+    <textarea class="form-control" rows="5" readonly>{{ cert_base64 }}</textarea>
+</div>
+{% endif %}
+{% if crl_file %}
+<div class="mb-3">
+    <label class="form-label">CRL File:</label>
+    <pre>{{ crl_file }}</pre>
+</div>
+{% endif %}
+{% endblock %}

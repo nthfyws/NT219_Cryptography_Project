@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5>Welcome, {{ user }}!</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">You are logged in as <strong>{{ role }}</strong>.</p>
+                
+                {% if role == 'Government' %}
+                <div class="alert alert-info">
+                    <h6>Government User Capabilities:</h6>
+                    <ul>
+                        <li>Generate Dilithium key pairs</li>
+                        <li>Create Certificate Signing Requests (CSRs)</li>
+                        <li>View all issued certificates</li>
+                    </ul>
+                </div>
+                {% endif %}
+                
+                {% if role == 'CA' %}
+                <div class="alert alert-warning">
+                    <h6>Certificate Authority Capabilities:</h6>
+                    <ul>
+                        <li>Initialize CA root certificate</li>
+                        <li>Sign certificate requests</li>
+                        <li>Revoke certificates</li>
+                        <li>Manage Certificate Revocation List (CRL)</li>
+                    </ul>
+                </div>
+                {% endif %}
+                
+                <div class="mt-3">
+                    <h6>Quick Actions:</h6>
+                    <div class="d-flex flex-wrap gap-2">
+                        {% if role == 'Government' %}
+                        <a href="{{ url_for('keygen_page') }}" class="btn btn-primary">Generate Key Pair</a>
+                        <a href="{{ url_for('csr_page') }}" class="btn btn-primary">Generate CSR</a>
+                        {% endif %}
+                        
+                        {% if role == 'CA' %}
+                        <a href="{{ url_for('ca_operations_page') }}" class="btn btn-warning">CA Operations</a>
+                        {% endif %}
+                        
+                        <a href="{{ url_for('cert_lookup_page') }}" class="btn btn-info">Certificate Lookup</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5>System Status</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        CA Certificate
+                        <span class="badge bg-{% if ca_status %}success{% else %}danger{% endif %}">
+                            {% if ca_status %}Active{% else %}Not Initialized{% endif %}
+                        </span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Total Certificates
+                        <span class="badge bg-primary">{{ cert_count }}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Revoked Certificates
+                        <span class="badge bg-danger">{{ revoked_count }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h5>Recent Activities</h5>
+            </div>
+            <div class="card-body" style="max-height: 300px; overflow-y: auto;">
+                {% if recent_activities %}
+                <div class="list-group">
+                    {% for activity in recent_activities %}
+                    <div class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <small class="text-muted">{{ activity.timestamp }}</small>
+                        </div>
+                        <p class="mb-1">{{ activity.operation }} - {{ activity.organization or 'System' }}</p>
+                        <small class="text-{% if activity.status == 'SUCCESS' %}success{% else %}danger{% endif %}">
+                            {{ activity.status }}
+                        </small>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <p class="text-muted">No recent activities</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

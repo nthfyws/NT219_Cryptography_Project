@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Generate Key Pair{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h4>Generate Dilithium Key Pair</h4>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="{{ url_for('keygen_page') }}">
+            <div class="mb-3">
+                <label for="orgInfo" class="form-label">Organization Information</label>
+                <input type="text" class="form-control" id="orgInfo" name="org_info" required>
+            </div>
+            <div class="mb-3">
+                <label for="passphrase" class="form-label">Passphrase</label>
+                <input type="password" class="form-control" id="passphrase" name="passphrase" minlength="12" required>
+                <div class="form-text">Must be at least 12 characters long</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Key Pair</button>
+        </form>
+
+        {% if pfx_file %}
+        <div class="mt-3">
+            <div class="alert alert-success">
+                Key pair generated successfully!
+            </div>
+            <a href="{{ pfx_file }}" class="btn btn-success" download>Download PFX File</a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
