@@ -29,6 +29,11 @@
         <div class="tab-content mt-3" id="caTabsContent">
             <!-- Initialize CA -->
             <div class="tab-pane fade show active" id="init" role="tabpanel">
+                {% if ca_exists %}
+                    <div class="alert alert-info mb-0">
+                        CA has already been initialized.
+                    </div>
+                {% else %}
                 <form method="POST" action="{{ url_for('ca_operations_page') }}">
                     <input type="hidden" name="action" value="init_ca">
                     <div class="mb-3">
@@ -38,6 +43,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Initialize CA</button>
                 </form>
+                {% endif %}
             </div>
             
             <!-- Sign CSR -->
@@ -85,22 +91,10 @@
     </div>
 </div>
 
-{% if ca_cert %}
-<div class="mb-3">
-    <label class="form-label">CA Certificate:</label>
-    <pre>{{ ca_cert }}</pre>
-</div>
-{% endif %}
 {% if cert_base64 %}
 <div class="mb-3">
     <label class="form-label">Certificate (Base64):</label>
     <textarea class="form-control" rows="5" readonly>{{ cert_base64 }}</textarea>
-</div>
-{% endif %}
-{% if crl_file %}
-<div class="mb-3">
-    <label class="form-label">CRL File:</label>
-    <pre>{{ crl_file }}</pre>
 </div>
 {% endif %}
 {% endblock %}

@@ -6,6 +6,7 @@ from db.mongo_setup import insert_cert, db
 import logging
 from getpass import getpass
 from datetime import datetime
+import tempfile
 
 # Cấu hình logging
 logging.basicConfig(filename='ca_operations.log', level=logging.INFO)
@@ -15,7 +16,7 @@ CA_CERT = "storage/ca/ca.crt"
 
 def log_operation(operation, org=None, success=True, details=None):
     log_entry = {
-        "timestamp": datetime.utcnow().isoformat(),
+        "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
         "operation": operation,
         "organization": org,
         "status": "SUCCESS" if success else "FAILED"
@@ -27,47 +28,46 @@ def log_operation(operation, org=None, success=True, details=None):
 
 def create_ca_cert(passphrase):
     """Create a self-signed CA certificate with a passphrase."""
-    # Validate passphrase
     if not passphrase or len(passphrase) < 12:
         return jsonify({"error": "Passphrase must be at least 12 characters"}), 400
 
     try:
-        # Tạo thư mục với permissions hạn chế
         os.makedirs("storage/ca", mode=0o700, exist_ok=True)
+        with tempfile.NamedTemporaryFile(mode='w+', delete=True) as pf:
+            pf.write(passphrase)
+            pf.flush()
+            # 1. Tạo key CA với passphrase bảo vệ
+            subprocess.run([
+                "openssl", "genpkey",
+                "-algorithm", "mldsa65",
+                "-out", CA_KEY,
+                "-aes-256-cbc",
+                "-pass", f"file:{pf.name}"
+            ], check=True)
 
-        # 1. Tạo key CA với passphrase bảo vệ
-        subprocess.run([
-            "openssl", "genpkey",
-            "-algorithm", "mldsa65",
-            "-out", CA_KEY,
-            "-aes-256-cbc",  # Mã hóa key với AES-256
-            "-pass", f"pass:{passphrase}"
-        ], check=True)
+            # 2. Tạo self-signed cert
+            subprocess.run([
+                "openssl", "req",
+                "-x509",
+                "-new",
+                "-key", CA_KEY,
+                "-out", CA_CERT,
+                "-subj", "/CN=CA Root",
+                "-passin", f"file:{pf.name}"
+            ], check=True)
 
-        # 2. Tạo self-signed cert (không dùng -nodes để giữ passphrase)
-        subprocess.run([
-            "openssl", "req",
-            "-x509",
-            "-new",
-            "-key", CA_KEY,
-            "-out", CA_CERT,
-            "-subj", "/CN=CA Root",
-            "-passin", f"pass:{passphrase}"
-        ], check=True)
+            os.chmod(CA_KEY, 0o600)
+            os.chmod(CA_CERT, 0o644)
 
-        # Đặt permissions cho file nhạy cảm
-        os.chmod(CA_KEY, 0o600)
-        os.chmod(CA_CERT, 0o644)
-
-        # 3. Trích xuất public key
-        ca_pubkey_path = "storage/ca/ca_pubkey.pem"
-        subprocess.run([
-            "openssl", "pkey", 
-            "-in", CA_KEY, 
-            "-pubout", 
-            "-out", ca_pubkey_path,
-            "-passin", f"pass:{passphrase}"
-        ], check=True)
+            # 3. Trích xuất public key
+            ca_pubkey_path = "storage/ca/ca_pubkey.pem"
+            subprocess.run([
+                "openssl", "pkey",
+                "-in", CA_KEY,
+                "-pubout",
+                "-out", ca_pubkey_path,
+                "-passin", f"file:{pf.name}"
+            ], check=True)
 
         # Đọc nội dung cert và pubkey
         with open(CA_CERT, "r") as f:
@@ -101,16 +101,18 @@ def sign_csr(org, passphrase):
 
     try:
         os.makedirs("storage/certs", mode=0o755, exist_ok=True)
-        subprocess.run([
-            "openssl", "x509", "-req", "-in", csr_path,
-            "-CA", CA_CERT,
-            "-CAkey", CA_KEY,
-            "-CAcreateserial",
-            "-out", cert_path,
-            "-days", "365",
-            "-passin", f"pass:{passphrase}"
-        ], check=True)
-        
+        with tempfile.NamedTemporaryFile(mode='w+', delete=True) as pf:
+            pf.write(passphrase)
+            pf.flush()
+            subprocess.run([
+                "openssl", "x509", "-req", "-in", csr_path,
+                "-CA", CA_CERT,
+                "-CAkey", CA_KEY,
+                "-CAcreateserial",
+                "-out", cert_path,
+                "-days", "365",
+                "-passin", f"file:{pf.name}"
+            ], check=True)
         os.chmod(cert_path, 0o644)
 
         with open(cert_path, "rb") as f:
@@ -132,43 +134,29 @@ def revoke_cert(org, passphrase, reason):
     openssl_cnf = "storage/ca/openssl.cnf"
 
     try:
-        # Revoke the certificate
-        subprocess.run([
-            "openssl", "ca",
-            "-config", openssl_cnf,
-            "-revoke", cert_path,
-            "-keyfile", CA_KEY,
-            "-cert", CA_CERT,
-            "-passin", f"pass:{passphrase}",
-            "-crl_reason", reason
-        ], check=True)
+        with tempfile.NamedTemporaryFile(mode='w+', delete=True) as pf:
+            pf.write(passphrase)
+            pf.flush()
+            subprocess.run([
+                "openssl", "ca",
+                "-config", openssl_cnf,
+                "-revoke", cert_path,
+                "-keyfile", CA_KEY,
+                "-cert", CA_CERT,
+                "-passin", f"file:{pf.name}",
+                "-crl_reason", reason
+            ], check=True)
 
-        # Generate new CRL
-        subprocess.run([
-            "openssl", "ca",
-            "-config", openssl_cnf,
-            "-gencrl",
-            "-keyfile", CA_KEY,
-            "-cert", CA_CERT,
-            "-out", crl_path,
-            "-passin", f"pass:{passphrase}"
-        ], check=True)
-
-        # Update CRL in MongoDB
-        with open(crl_path, "r") as f:
-            crl_data = f.read()
-
-        db.crl.update_one(
-            {"name": "current_crl"},
-            {
-                "$set": {
-                    "created_at": datetime.utcnow(),
-                    "crl_data": crl_data
-                },
-                "$addToSet": {"revoked_certs": org}
-            },
-            upsert=True
-        )
+            # Sinh lại file CRL
+            subprocess.run([
+                "openssl", "ca",
+                "-config", openssl_cnf,
+                "-gencrl",
+                "-keyfile", CA_KEY,
+                "-cert", CA_CERT,
+                "-out", crl_path,
+                "-passin", f"file:{pf.name}"
+            ], check=True)
 
         # Update status in certificates collection
         db.certificates.update_one(
@@ -177,7 +165,7 @@ def revoke_cert(org, passphrase, reason):
         )
 
         log_operation("Revoke Certificate", org=org, success=True)
-        return crl_path  # Trả về đường dẫn file CRL hoặc nội dung nếu muốn
+        return crl_path
     except subprocess.CalledProcessError as e:
         log_operation("Revoke Certificate", org=org, success=False, details=str(e))
         raise Exception(f"Certificate revocation failed: {str(e)}")

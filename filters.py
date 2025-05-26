@@ -9,5 +9,3 @@ def datetimeformat(value, format='%Y-%m-%d %H:%M:%S'):
         return value
 
 # Trong app.py thêm:
-# from filters import datetimeformat
-# app.jinja_env.filters['datetimeformat'] = datetimeformat
