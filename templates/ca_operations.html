@@ -60,6 +60,33 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Sign CSR</button>
                 </form>
+                {% if pending_csrs %}
+                <div class="mt-4">
+                    <h5>Pending CSRs</h5>
+                    <ul class="list-group">
+                        {% for csr in pending_csrs %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            {{ csr }}
+                            <a href="{{ url_for('static', filename='csr/' ~ csr) }}" class="btn btn-sm btn-outline-primary" download>Download</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+
+                {% if signed_csrs %}
+                <div class="mt-4">
+                    <h5>Signed CSRs</h5>
+                    <ul class="list-group">
+                        {% for csr in signed_csrs %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            {{ csr }}
+                            <a href="{{ url_for('static', filename='csr/' ~ csr) }}" class="btn btn-sm btn-outline-primary" download>Download</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
             </div>
             
             <!-- Revoke Certificate -->
@@ -85,6 +112,24 @@
                         </select>
                     </div>
                     <button type="submit" class="btn btn-danger">Revoke Certificate</button>
+                    {% if active_certs %}
+                    <div class="mt-4">
+                        <h5>Active Certificates</h5>
+                        <ul class="list-group">
+                            {% for cert in active_certs %}
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>
+                                    <strong>{{ cert.org or cert.org_id }}</strong>
+                                    {% if cert.issued_at %}
+                                        - Issued: {{ cert.issued_at.strftime('%d/%m/%Y %H:%M:%S') }}
+                                    {% endif %}
+                                </span>
+                                <a href="{{ url_for('download_cert', org_id=cert.org or cert.org_id) }}" class="btn btn-sm btn-success">Download Cert</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
                 </form>
             </div>
         </div>

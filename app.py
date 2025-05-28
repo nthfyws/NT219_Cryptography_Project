@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, flash, session
+from flask import Flask, render_template, request, jsonify, flash, session, send_file
 from keygen import generate_dilithium_keypair
 from csr import generate_csr
 from ca import create_ca_cert, sign_csr, revoke_cert, get_ca_cert
@@ -12,6 +12,7 @@ from auth import auth_bp
 from dashboard import dashboard_bp
 from crl import get_crl
 from middleware import ca_required, gov_required, login_required
+import glob
 
 # Load .env file
 load_dotenv()
@@ -104,10 +105,26 @@ def csr_page():
 @login_required
 @ca_required
 def ca_operations_page():
+    active_certs = []
+    for cert in db.certificates.find({"status": "ACTIVE"}):
+        active_certs.append(cert)
+    
     ca_cert = None
     cert_base64 = None
     crl_file = None
     ca_exists = os.path.exists('storage/ca/ca.crt')
+
+    # Lấy danh sách CSR chưa ký và đã ký
+    pending_csrs = []
+    signed_csrs = []
+    if os.path.exists('storage/csr'):
+        for csr_file in glob.glob('storage/csr/*.csr'):
+            org = os.path.splitext(os.path.basename(csr_file))[0]
+            cert_file = f'storage/certs/{org}.crt'
+            if os.path.exists(cert_file):
+                signed_csrs.append(os.path.basename(csr_file))
+            else:
+                pending_csrs.append(os.path.basename(csr_file))
 
     if request.method == 'POST':
         action = request.form.get('action')
@@ -140,7 +157,7 @@ def ca_operations_page():
             except Exception as e:
                 flash('Cerificate revoking failed: Wrong CA passphrase/Organization not found/Certificate already revoked.', 'danger')
 
-    return render_template('ca_operations.html', ca_cert=ca_cert, cert_base64=cert_base64, crl_file=crl_file, ca_exists=ca_exists)
+    return render_template('ca_operations.html', ca_cert=ca_cert, cert_base64=cert_base64, crl_file=crl_file, ca_exists=ca_exists, pending_csrs=pending_csrs, signed_csrs=signed_csrs, active_certs=active_certs)
 
 @app.route('/cert-lookup', methods=['GET', 'POST'])
 @login_required
@@ -156,7 +173,6 @@ def cert_lookup_page():
             if hasattr(cert_details, "get_json"):
                 cert_details = cert_details.get_json()
     else:
-        # GET: lấy tất cả certs hoặc chi tiết nếu có org_id trên query string
         org_id = request.args.get('org_id')
         if org_id:
             cert_details = get_cert_by_orgid(org_id)
@@ -170,7 +186,25 @@ def cert_lookup_page():
         elif isinstance(all_certs, list):
             certs = all_certs
 
+    # Giải mã cert base64 nếu có
+    if cert_details and cert_details.get("cert_data"):
+        try:
+            cert_pem = base64.b64decode(cert_details["cert_data"]).decode()
+            cert_details["cert_pem"] = cert_pem
+        except Exception:
+            cert_details["cert_pem"] = cert_details["cert_data"]
+
     return render_template('cert_lookup.html', certs=certs, cert_details=cert_details, org_id=org_id)
+
+@app.route('/download-cert/<org_id>')
+@login_required
+def download_cert(org_id):
+    cert_path = f'storage/certs/{org_id}.crt'
+    if os.path.exists(cert_path):
+        return send_file(cert_path, as_attachment=True)
+    else:
+        flash('Certificate file not found.', 'danger')
+        return redirect(request.referrer or url_for('cert_lookup_page'))
 
 if __name__ == "__main__":
     create_directories()

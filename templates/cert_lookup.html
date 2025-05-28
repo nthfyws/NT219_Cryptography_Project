@@ -56,8 +56,8 @@
                     <div class="col-md-6">
                         <h6>Organization Information</h6>
                         <p><strong>Org ID:</strong> {{ cert_details.org or cert_details.org_id }}</p>
-                        <p><strong>Issued At:</strong> {{ cert_details.issued_at }}</p>
-                        <p><strong>Updated At:</strong> {{ cert_details.updated_at }}</p>
+                        <p><strong>Issued At:</strong> {{ cert_details.issued_at.strftime('%d/%m/%Y %H:%M:%S')  }}</p>
+                        <p><strong>Updated At:</strong> {{ cert_details.updated_at.strftime('%d/%m/%Y %H:%M:%S')  }}</p>
                     </div>
                     <div class="col-md-6">
                         <h6>Status</h6>
@@ -65,18 +65,12 @@
                             {{ cert_details.status }}
                         </span>
                         <h6 class="mt-3">Certificate Path</h6>
-                        {% if cert_details.path %}
-                            <a href="{{ url_for('static', filename=cert_details.path | replace('storage/', '') ) }}" download class="btn btn-sm btn-outline-primary">
-                                Download Certificate
+                        {% if cert_details and cert_details.org %}
+                            <a href="{{ url_for('download_cert', org_id=cert_details.org or cert_details.org_id) }}" class="btn btn-sm btn-success mt-2">
+                                Download Certificate (.crt)
                             </a>
-                        {% else %}
-                            <p>No certificate available</p>
                         {% endif %}
                     </div>
-                </div>
-                <div class="mt-3">
-                    <h6>Certificate Data</h6>
-                    <pre style="white-space: pre-wrap;">{{ cert_details.cert }}</pre>
                 </div>
             </div>
         </div>

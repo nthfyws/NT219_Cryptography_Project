@@ -353,3 +353,630 @@ INFO:werkzeug:127.0.0.1 - - [26/May/2025 21:23:03] "[32mGET /auth/logout HTTP/1
 INFO:werkzeug:127.0.0.1 - - [26/May/2025 21:23:03] "GET /auth/login HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [26/May/2025 21:23:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [26/May/2025 21:23:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.85:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:57:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:57:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:57:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:57:50] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:57:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:57:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:57:57] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:57:57] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:57:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:57:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:03] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:03] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:24] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:25] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:26] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:31] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:31] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:34] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:34] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:36] "GET /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:39] "POST /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:41] "GET /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:44] "POST /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:47] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:47] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:47] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:50] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:50] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:51] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:58:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:01] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:04] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:05] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:06] "GET /cert-lookup?org_id=gov2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:07] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:08] "GET /cert-lookup?org_id=gov2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:10] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:11] "GET /cert-lookup?org_id=gov2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:15] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:15] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 18:59:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/filters.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:12] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:16] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:17] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:19] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:20] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:22] "GET /cert-lookup?org_id=gov2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:24] "[33mGET /static/certs/gov2.crt HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:56] "GET /cert-lookup?org_id=gov2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:58] "GET /cert-lookup?org_id=gov2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:59] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:05:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:00] "GET /cert-lookup?org_id=gov2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:01] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:01] "GET /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:02] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:02] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.85:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:51] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:51] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:54] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:54] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:55] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:56] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:57] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:59] "GET /cert-lookup?org_id=gov2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:06:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:08:38] "GET /cert-lookup?org_id=gov2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:08:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:08:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:08:39] "GET /cert-lookup?org_id=gov2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:08:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:08:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:08:40] "GET /cert-lookup?org_id=gov2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:08:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:08:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:08:41] "[33mGET /static/certs/gov2.crt HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:08:45] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:08:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:08:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:08:46] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:08:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:08:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.85:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:10:43] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:10:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:10:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:10:44] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:10:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:10:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:11:20] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:11:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:11:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:11:20] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:11:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:11:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:11:30] "GET /cert-lookup?org_id=gov2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:11:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:11:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:12:25] "GET /cert-lookup?org_id=gov2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:12:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:12:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:12:54] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:12:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:12:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:12:57] "GET /cert-lookup?org_id=gov2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:12:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:12:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:12:58] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:12:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:12:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/lookup.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:15:02] "[35m[1mGET /cert-lookup?org_id=gov1 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:15:03] "[35m[1mGET /cert-lookup?org_id=gov1 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:15:03] "[36mGET /cert-lookup?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:15:03] "[36mGET /cert-lookup?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:15:03] "GET /cert-lookup?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:15:03] "GET /cert-lookup?__debugger__=yes&cmd=resource&f=console.png&s=R43knsKofme3KQjJYylt HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:15:19] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:15:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:15:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:15:22] "GET /download-cert/gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:15:56] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:15:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:15:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:15:58] "GET /cert-lookup?org_id=gov2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:15:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:15:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:16:02] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:16:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:16:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:16:25] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:16:25] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:16:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:16:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:16:29] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:16:30] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:16:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:16:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:17:01] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:17:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:17:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:17:04] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:17:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:17:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.85:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:18:35] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:18:35] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:18:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.85:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:22] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:27] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:27] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:32] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:33] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:34] "GET /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:37] "POST /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:39] "[35m[1mGET /csr HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:39] "[36mGET /csr?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:39] "[36mGET /csr?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:20:39] "GET /csr?__debugger__=yes&cmd=resource&f=console.png&s=hAQLYfZOM9PaQrtEgstO HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:21:48] "GET /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:21:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:21:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:34] "GET /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:40] "GET /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:45] "GET /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:49] "POST /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:52] "GET /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:57] "POST /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:22:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:23:05] "POST /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:23:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:23:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:25:42] "[35m[1mPOST /csr HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:25:42] "[36mGET /csr?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:25:42] "[36mGET /csr?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:25:42] "GET /csr?__debugger__=yes&cmd=resource&f=console.png&s=3tZVZMvu7mKGAMfJeLxN HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:26:13] "POST /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:26:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:26:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:26:20] "POST /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:26:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:26:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:27:07] "POST /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:27:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:27:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/filters.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:28:37] "POST /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:28:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:28:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:28:41] "POST /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:28:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:28:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:28:43] "GET /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:28:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:28:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:28:48] "POST /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:28:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:28:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:28:51] "[35m[1mGET /csr HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:28:52] "[36mGET /csr?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:28:52] "[36mGET /csr?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:28:52] "GET /csr?__debugger__=yes&cmd=resource&f=console.png&s=bEW1P2JNqFpkrxNGGJwu HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:29:16] "[35m[1mGET /csr HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:29:16] "[36mGET /csr?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:29:16] "[36mGET /csr?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:29:16] "GET /csr?__debugger__=yes&cmd=resource&f=console.png&s=iZztShQikYWbfnH0pLeD HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:29:17] "[35m[1mGET /csr HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:29:17] "[36mGET /csr?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:29:17] "[36mGET /csr?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:29:17] "[36mGET /csr?__debugger__=yes&cmd=resource&f=console.png&s=iZztShQikYWbfnH0pLeD HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:29:25] "[35m[1mGET /csr HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:29:25] "[36mGET /csr?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:29:25] "[36mGET /csr?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:29:25] "GET /csr?__debugger__=yes&cmd=resource&f=console.png&s=8eJg3SBgiKBcicA9etbM HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:29:57] "GET /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:29:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:29:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:32:45] "GET /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:32:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:32:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:32:54] "POST /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:32:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:32:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:32:59] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:32:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:32:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:00] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:02] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:02] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:06] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:07] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:08] "[35m[1mGET /ca-operations HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:08] "GET /ca-operations?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:08] "GET /ca-operations?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:08] "GET /ca-operations?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:08] "GET /ca-operations?__debugger__=yes&cmd=resource&f=console.png&s=GRwTRRAYbbye6tmXqAPI HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:22] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/auth.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:34] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:33:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:34:09] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:34:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:34:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:37:03] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:37:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:37:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:37:12] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:37:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:37:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:37:24] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:37:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:37:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:37:28] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:37:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:37:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:37:31] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug: * Detected change in '/home/nthuy/Documents/nt219p22antt_project/NT219_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 501-081-744
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:39:05] "GET /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:39:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:39:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:40:09] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:40:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:40:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:40:16] "POST /ca-operations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:40:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:40:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:40:55] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:40:55] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:40:55] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:40:55] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:40:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:00] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:02] "GET /keygen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:03] "GET /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:06] "GET /csr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:06] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:07] "GET /cert-lookup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:09] "GET /cert-lookup?org_id=gov1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:12] "GET /cert-lookup?org_id=gov2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2025 19:41:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -

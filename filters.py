@@ -7,5 +7,3 @@ def datetimeformat(value, format='%Y-%m-%d %H:%M:%S'):
         return dt.strftime(format)
     except Exception:
         return value
-
-# Trong app.py thêm:
