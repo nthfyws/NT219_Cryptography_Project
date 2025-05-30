@@ -1,0 +1,71 @@
+  {% extends 'base.html' %}
+
+  {% block title %}Signed Files{% endblock %}
+
+  {% block content %}
+
+  <div class="card">
+    <div class="card-header">
+      <h4>Signed Files</h4>
+    </div>
+    <div class="card-body">
+      <div class="mb-3">
+        <input type="text" id="searchInput" class="form-control form-control-sm w-100" placeholder="Search by filename...">
+      </div>
+      <table id="filesTable" class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Filename</th>
+            <th>Signer</th>
+            <th>Signed Time</th>
+            <th>Download</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for f in files %}
+          <tr>
+            <td class="filename-cell">{{ f.filename }}</td>
+            <td>{{ f.signer }}</td>
+            <td>{{ f.signed_time }}</td>
+            <td>
+              <a href="{{ url_for('download_signed_file', filename=f.filename) }}"
+                class="btn btn-primary btn-sm">Download</a>
+            </td>
+            <td>
+              {% if not f.ispublic %}
+              <form action="{{ url_for('make_file_public', file_id=f._id) }}" method="post" style="display:inline;">
+                <button type="submit" class="btn btn-warning btn-sm">Publish</button>
+              </form>
+              {% else %}
+              <span class="text-success">Published</span>
+              {% endif %}
+            </td>
+          </tr>
+          {% else %}
+          <tr>
+            <td colspan="5" class="text-center">No documents published yet.</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('searchInput').addEventListener('keyup', function() {
+      const filter = this.value.toLowerCase();
+      const rows = document.querySelectorAll('#filesTable tbody tr');
+
+      rows.forEach(row => {
+        const filename = row.querySelector('.filename-cell').textContent.toLowerCase();
+        if (filename.includes(filter)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+  {% endblock %}

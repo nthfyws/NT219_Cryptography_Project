@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, flash, session, send_file
+from flask import Flask, render_template, request, jsonify, flash, session, send_file, redirect, url_for
 from keygen import generate_dilithium_keypair
 from csr import generate_csr
 from ca import create_ca_cert, sign_csr, revoke_cert, get_ca_cert
@@ -13,6 +13,11 @@ from dashboard import dashboard_bp
 from crl import get_crl
 from middleware import ca_required, gov_required, login_required
 import glob
+from werkzeug.utils import secure_filename
+from signer import extract_private_key, extract_cert, extract_public_key, sign_pdf, embed_qrcode_and_metadata 
+import base64
+from datetime import datetime
+from bson.objectid import ObjectId
 
 # Load .env file
 load_dotenv()
@@ -205,6 +210,93 @@ def download_cert(org_id):
     else:
         flash('Certificate file not found.', 'danger')
         return redirect(request.referrer or url_for('cert_lookup_page'))
+    
+@app.route('/docs/sign', methods=['GET', 'POST'])
+@login_required  
+@gov_required   
+def sign_page():
+    if request.method == 'POST':
+        try:
+            pdf_file = request.files['pdf_file']
+            pfx_file = request.files['pfx_file']
+            passphrase = request.form['passphrase']
+            signer_name = session.get('user', 'Unknown')
+
+            filename = secure_filename(pdf_file.filename)
+            pfx_filename = secure_filename(pfx_file.filename)
+
+            os.makedirs('storage/sign', exist_ok=True)
+            pdf_path = f'storage/sign/{filename}'
+            pfx_path = f'storage/sign/{pfx_filename}'
+
+            pdf_file.save(pdf_path)
+            pfx_file.save(pfx_path)
+
+            # Extract private key và cert tự ký
+            private_key_pem = extract_private_key(pfx_path, passphrase)
+            cert_pem = extract_cert(pfx_path, passphrase)
+
+            # Lấy public key từ cert
+            public_key_pem = extract_public_key(cert_pem)
+
+            # Ký file PDF
+            signature = sign_pdf(pdf_path, private_key_pem)
+            signature_b64 = base64.b64encode(signature).decode()
+
+            # Tạo QR code dữ liệu: tên người ký + thời gian
+            qr_data = f"Signer: {signer_name}\nDate: {datetime.utcnow().isoformat()}Z"
+
+            signed_pdf_path = f'storage/sign/signed_{filename}'
+            embed_qrcode_and_metadata(pdf_path, qr_data, signed_pdf_path, signer_name, signature_b64, public_key_pem)
+
+            # Lưu metadata vào MongoDB
+            db.signed_files.insert_one({
+                'filename': f'signed_{filename}',
+                'original_filename': filename,
+                'signer': signer_name,
+                'ispublic': False,
+                'signed_time': datetime.utcnow(),
+                'signature_b64': signature_b64,
+                'public_key_pem': public_key_pem,
+            })
+
+            return send_file(signed_pdf_path, as_attachment=True)
+
+        except Exception as e:
+            flash(f"Error signing PDF: {e}", 'danger')
+
+    return render_template('sign.html')
+
+@app.route('/docs/signed_files')
+@login_required
+def signed_files_page():
+    files = list(db.signed_files.find().sort('signed_time', -1))  # Lấy mới nhất trước
+    return render_template('signed_files.html', files=files)
+
+from flask import send_from_directory
+
+@app.route('/docs/make_public/<file_id>', methods=['POST'])
+@login_required
+def make_file_public(file_id):
+    db.signed_files.update_one(
+        {'_id': ObjectId(file_id)},
+        {'$set': {'ispublic': True}}
+    )
+    return redirect(url_for('signed_files_page'))
+
+
+@app.route('/docs/download/<filename>')
+@login_required
+def download_signed_file(filename):
+    return send_from_directory('storage/sign', filename, as_attachment=True)
+
+@app.route('/docs/public')
+@login_required 
+def public_files_page():
+    files = list(db.signed_files.find({'ispublic': True}).sort('signed_time', -1))
+    return render_template('public_files.html', files=files)
+
+
 
 if __name__ == "__main__":
     create_directories()
