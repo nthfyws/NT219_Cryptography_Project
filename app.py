@@ -105,7 +105,16 @@ def csr_page():
             flash(f'Error: {str(e)}', 'danger')
     return render_template('csr.html')
 
-
+@app.route('/download-pfx/<org_id>')
+@login_required
+def download_pfx(org_id):
+    pfx_path = f'storage/pfx/{org_id}.pfx'
+    if os.path.exists(pfx_path):
+        return send_file(pfx_path, as_attachment=True)
+    else:
+        flash('PFX file not found.', 'danger')
+        return redirect(request.referrer or url_for('csr_page'))
+    
 @app.route('/ca-operations', methods=['GET', 'POST'])
 @login_required
 @ca_required
@@ -170,6 +179,7 @@ def cert_lookup_page():
     certs = []
     cert_details = None
     org_id = None
+    ca_cert = None
 
     if request.method == 'POST':
         org_id = request.form.get('org_id')
@@ -191,6 +201,16 @@ def cert_lookup_page():
         elif isinstance(all_certs, list):
             certs = all_certs
 
+    # Lấy CA cert (dạng PEM) từ bất kỳ cert hoặc từ DB
+    if cert_details and cert_details.get("ca_cert"):
+        ca_cert = cert_details["ca_cert"]
+    elif certs and certs[0].get("ca_cert"):
+        ca_cert = certs[0]["ca_cert"]
+    else:
+        from db.mongo_setup import db
+        ca = db.ca.find_one({}, {'_id': 0, 'ca_cert': 1})
+        ca_cert = ca.get("ca_cert") if ca else None
+
     # Giải mã cert base64 nếu có
     if cert_details and cert_details.get("cert_data"):
         try:
@@ -199,7 +219,15 @@ def cert_lookup_page():
         except Exception:
             cert_details["cert_pem"] = cert_details["cert_data"]
 
-    return render_template('cert_lookup.html', certs=certs, cert_details=cert_details, org_id=org_id)
+    # Giải mã ca_cert nếu là base64
+    ca_cert_pem = None
+    if ca_cert:
+        try:
+            ca_cert_pem = base64.b64decode(ca_cert).decode()
+        except Exception:
+            ca_cert_pem = ca_cert
+
+    return render_template('cert_lookup.html', certs=certs, cert_details=cert_details, org_id=org_id, ca_cert_pem=ca_cert_pem)
 
 @app.route('/download-cert/<org_id>')
 @login_required
@@ -295,7 +323,6 @@ def download_signed_file(filename):
 def public_files_page():
     files = list(db.signed_files.find({'ispublic': True}).sort('signed_time', -1))
     return render_template('public_files.html', files=files)
-
 
 
 if __name__ == "__main__":

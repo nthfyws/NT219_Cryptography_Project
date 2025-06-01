@@ -22,9 +22,11 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">CSR (Base64):</label>
-                <textarea class="form-control" rows="5" readonly>{{ csr_data }}</textarea>
+                <textarea class="form-control" rows="8" readonly>{{ csr_data }}</textarea>
             </div>
-            <button onclick="copyToClipboard(this)" class="btn btn-secondary">Copy to Clipboard</button>
+            <a href="{{ url_for('download_pfx', org_id=session['user']) }}" class="btn btn-success">
+                Download Your .pfx File
+            </a>
         </div>
         {% endif %}
     </div>

@@ -79,7 +79,7 @@ def create_ca_cert(passphrase):
         ca_info_col = db["ca"]
         if not ca_info_col.find_one({"subject": "/CN=RootCA"}):
             ca_info_col.insert_one({
-                "subject": "/CN=RootCA",
+                "subject": "/CN=CA Root",
                 "ca_cert": ca_cert,
                 "ca_pubkey": ca_pubkey,
                 "status": "ACTIVE"

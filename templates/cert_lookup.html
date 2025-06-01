@@ -17,13 +17,20 @@
                 </div>
             </div>
         </form>
-
+        
         {% if certs %}
         <div class="mt-4">
             <h5>All Certificates</h5>
             <div class="table-responsive">
                 <table class="table table-striped table-hover">
-                    <!-- ...table head... -->
+                    <thead>
+                        <tr>
+                            <th>Org ID</th>
+                            <th>Status</th>
+                            <th>Issued At</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
                     <tbody>
                         {% for cert in certs %}
                         <tr>
@@ -33,7 +40,17 @@
                                     {{ cert.status }}
                                 </span>
                             </td>
-                            <td><p><strong>Issued At:</strong> {{ cert_details.issued_at.strftime('%d/%m/%Y %H:%M:%S') if cert_details.issued_at }}</p></td>
+                            <td>
+                                {% if cert.issued_at %}
+                                    {% if cert.issued_at.strftime %}
+                                        {{ cert.issued_at.strftime('%d/%m/%Y %H:%M:%S') }}
+                                    {% else %}
+                                        {{ cert.issued_at }}
+                                    {% endif %}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                            </td>
                             <td>
                                 <a href="{{ url_for('cert_lookup_page', org_id=cert.org) }}" 
                                    class="btn btn-sm btn-info">View</a>
@@ -56,9 +73,28 @@
                     <div class="col-md-6">
                         <h6>Organization Information</h6>
                         <p><strong>Org ID:</strong> {{ cert_details.org or cert_details.org_id }}</p>
-                        <p><strong>Issued At:</strong> {{ cert_details.issued_at.strftime('%d/%m/%Y %H:%M:%S')  }}</p>
-                        <p><strong>Updated At:</strong> {{ cert_details.updated_at.strftime('%d/%m/%Y %H:%M:%S')  }}</p>
-                    </div>
+                        <p><strong>Issued At:</strong>
+                            {% if cert_details.issued_at %}
+                                {% if cert_details.issued_at.strftime %}
+                                    {{ cert_details.issued_at.strftime('%d/%m/%Y %H:%M:%S') }}
+                                {% else %}
+                                    {{ cert_details.issued_at }}
+                                {% endif %}
+                            {% else %}
+                                N/A
+                            {% endif %}
+                        </p>
+                        <p><strong>Updated At:</strong>
+                            {% if cert_details.updated_at %}
+                                {% if cert_details.updated_at.strftime %}
+                                    {{ cert_details.updated_at.strftime('%d/%m/%Y %H:%M:%S') }}
+                                {% else %}
+                                    {{ cert_details.updated_at }}
+                                {% endif %}
+                            {% else %}
+                                N/A
+                            {% endif %}
+                        </p>                    </div>
                     <div class="col-md-6">
                         <h6>Status</h6>
                         <span class="badge bg-{% if cert_details.status == 'ACTIVE' %}success{% else %}danger{% endif %}">
@@ -75,6 +111,26 @@
             </div>
         </div>
         {% endif %}
+
+        {% if ca_cert_pem %}
+        <div class="card mt-4">
+            <div class="card-header bg-secondary text-white">
+                <h5>CA Certificate (Chứng thư số của CA)</h5>
+            </div>
+            <div class="card-body">
+                <button class="btn btn-sm btn-outline-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#ca_cert_collapse">
+                    Xem CA Certificate
+                </button>
+                <a href="data:application/x-pem-file;charset=utf-8,{{ ca_cert_pem | urlencode }}" download="ca_certificate.crt" class="btn btn-sm btn-success mb-2 ms-2">
+                    Tải về CA Certificate
+                </a>
+                <div class="collapse" id="ca_cert_collapse">
+                    <pre style="font-size: 0.9em; background: #f8f9fa; border: 1px solid #dee2e6; padding: 10px;">{{ ca_cert_pem }}</pre>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
     </div>
 </div>
 {% endblock %}
