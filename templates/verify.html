@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Verify PDF Signature{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Verify PDF Signature</h2>
+    <form method="post" action="/verify/upload" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="signed_pdf" class="form-label">Upload signed PDF:</label>
+        <input type="file" class="form-control" id="signed_pdf" name="signed_pdf" accept=".pdf" required>
+    </div>
+    <div class="mb-3">
+        <label for="original_pdf" class="form-label">Upload original PDF:</label>
+        <input type="file" class="form-control" id="original_pdf" name="original_pdf" accept=".pdf" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Verify</button>
+    </form>
+
+    {% if result is not none %}
+        <div class="alert {{ 'alert-success' if result else 'alert-danger' }} mt-3">
+            {{ 'PDF is valid and signature verified.' if result else 'Signature verification failed or invalid certificate.' }}
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
