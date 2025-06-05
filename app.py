@@ -18,6 +18,11 @@ from signer import extract_private_key, extract_cert, extract_public_key, sign_p
 import base64
 from datetime import datetime
 from bson.objectid import ObjectId
+from PyPDF2 import PdfReader
+from cryptography import x509
+from cryptography.hazmat.primitives import serialization, hashes
+from cryptography.hazmat.primitives.asymmetric import padding
+from verify import verify_pdf
 
 # Load .env file
 load_dotenv()
@@ -29,6 +34,7 @@ CA_PASSPHRASE = os.getenv("CA_PASSPHRASE")
 # Init Flask
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY")
+print("FLASK_SECRET_KEY =", os.getenv("FLASK_SECRET_KEY"))
 
 app.register_blueprint(auth_bp, url_prefix='/auth')
 app.register_blueprint(dashboard_bp)
@@ -275,7 +281,7 @@ def sign_page():
             qr_data = f"Signer: {signer_name}\nDate: {datetime.utcnow().isoformat()}Z"
 
             signed_pdf_path = f'storage/sign/signed_{filename}'
-            embed_qrcode_and_metadata(pdf_path, qr_data, signed_pdf_path, signer_name, signature_b64, public_key_pem)
+            embed_qrcode_and_metadata(pdf_path, qr_data, signed_pdf_path, signer_name, signature_b64, public_key_pem, cert_pem)
 
             # Lưu metadata vào MongoDB
             db.signed_files.insert_one({
@@ -286,6 +292,7 @@ def sign_page():
                 'signed_time': datetime.utcnow(),
                 'signature_b64': signature_b64,
                 'public_key_pem': public_key_pem,
+                'certificate_pem': cert_pem
             })
 
             return send_file(signed_pdf_path, as_attachment=True)
@@ -323,6 +330,30 @@ def download_signed_file(filename):
 def public_files_page():
     files = list(db.signed_files.find({'ispublic': True}).sort('signed_time', -1))
     return render_template('public_files.html', files=files)
+
+
+@app.route('/verify/upload', methods=['GET', 'POST'])
+@login_required
+def verify_page():
+    result = None
+    message = ''
+    if request.method == 'POST':
+        pdf_file = request.files.get('signed_pdf')
+        if not pdf_file:
+            result = False
+            message = 'Thiếu file PDF'
+        else:
+            os.makedirs("temp_uploads", exist_ok=True)
+            file_path = f"temp_uploads/{secure_filename(pdf_file.filename)}"
+            pdf_file.save(file_path)
+
+            valid, reason = verify_pdf(file_path)
+            os.remove(file_path)
+
+            result = valid
+            message = reason
+
+    return render_template('verify.html', result=result, message=message)
 
 
 if __name__ == "__main__":
