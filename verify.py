@@ -3,16 +3,17 @@ import base64
 import hashlib
 import subprocess
 import tempfile
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from PyPDF2 import PdfReader, PdfWriter
 from cryptography import x509
 from cryptography.hazmat.primitives import serialization
 from io import BytesIO
 from dateutil import parser
-
+from db.mongo_setup import db
+import pymongo
 # Đường dẫn tới các file của CA
 CA_CERT_PATH = 'storage/ca/ca.crt'
-CA_CRL_PATH = 'storage/ca/crl.pem'
+# CA_CRL_PATH = 'storage/ca/crl.pem'
 
 def hash_pdf_content(pdf_path):
     """
@@ -60,7 +61,9 @@ def verify_pdf(signed_pdf_path):
                 # Parse chuỗi ISO thành đối tượng datetime
                 dt_obj = parser.isoparse(signed_at_iso)
                 # Định dạng lại theo kiểu Việt Nam
-                details['signed_at'] = dt_obj.strftime('%H:%M:%S ngày %d-%m-%Y')
+                vn_timezone = timezone(timedelta(hours=7))
+                dt_obj_vn = dt_obj.astimezone(vn_timezone)
+                details['signed_at'] = dt_obj_vn.strftime('%H:%M:%S ngày %d-%m-%Y')
             except (ValueError, TypeError):
                 details['signed_at'] = signed_at_iso # Giữ nguyên nếu không parse được
         details['algorithm'] = metadata.get('/SignatureAlgorithm')
@@ -81,12 +84,16 @@ def verify_pdf(signed_pdf_path):
         signer_cert_obj = x509.load_pem_x509_certificate(certificate_pem.encode())
         details['cert_subject'] = signer_cert_obj.subject.rfc4514_string()
         details['cert_issuer'] = signer_cert_obj.issuer.rfc4514_string()
+        
 
         valid_from_dt = signer_cert_obj.not_valid_before
         valid_to_dt = signer_cert_obj.not_valid_after
-        
-        details['cert_valid_from'] = valid_from_dt.strftime('%H:%M:%S ngày %d-%m-%Y')
-        details['cert_valid_to'] = valid_to_dt.strftime('%H:%M:%S ngày %d-%m-%Y')
+        vn_timezone = timezone(timedelta(hours=7))
+        valid_from_vn = valid_from_dt.astimezone(vn_timezone)
+        valid_to_vn = valid_to_dt.astimezone(vn_timezone)
+
+        details['cert_valid_from'] = valid_from_vn.strftime('%H:%M:%S ngày %d-%m-%Y')
+        details['cert_valid_to'] = valid_to_vn.strftime('%H:%M:%S ngày %d-%m-%Y')
 
         # details['cert_valid_from'] = signer_cert_obj.not_valid_before.isoformat()
         # details['cert_valid_to'] = signer_cert_obj.not_valid_after.isoformat()
@@ -122,13 +129,33 @@ def verify_pdf(signed_pdf_path):
             return False, "Certificate đã hết hạn hoặc chưa có hiệu lực.", details
         
         # Kiểm tra Certificate có trong danh sách thu hồi (CRL) không
-        if os.path.exists(CA_CRL_PATH):
-            with open(CA_CRL_PATH, 'rb') as f:
-                crl_data = f.read()
-                crl = x509.load_pem_x509_crl(crl_data)
-                for revoked_cert in crl:
-                    if revoked_cert.serial_number == signer_cert_obj.serial_number:
-                        return False, f"Certificate đã bị thu hồi vào ngày {revoked_cert.revocation_date_utc}.", details
+        # if os.path.exists(CA_CRL_PATH):
+        #     with open(CA_CRL_PATH, 'rb') as f:
+        #         crl_data = f.read()
+        #         crl = x509.load_pem_x509_crl(crl_data)
+        #         for revoked_cert in crl:
+        #             if revoked_cert.serial_number == signer_cert_obj.serial_number:
+        #                 return False, f"Certificate đã bị thu hồi vào ngày {revoked_cert.revocation_date_utc}.", details
+        if db is not None: # Chỉ thực hiện nếu kết nối DB thành công
+        # Lấy bản ghi CRL mới nhất từ DB
+            crl_record = db.crl.find_one(sort=[('last_update', pymongo.DESCENDING)])
+        
+            if crl_record and 'crl_pem' in crl_record:
+                crl_pem_str = crl_record['crl_pem']
+                try:
+                # Load CRL từ chuỗi PEM lấy từ DB
+                    crl = x509.load_pem_x509_crl(crl_pem_str.encode('utf-8'))
+                
+                # Kiểm tra xem certificate hiện tại có trong CRL không
+                    for revoked_cert in crl:
+                        if revoked_cert.serial_number == signer_cert_obj.serial_number:
+                            revocation_dt_str = revoked_cert.revocation_date.strftime('%H:%M:%S ngày %d-%m-%Y')
+                            return False, f"Certificate đã bị thu hồi vào ngày {revocation_dt_str}.", details
+                except Exception as e:
+                # Ghi nhận lỗi nếu không parse được CRL, nhưng không làm dừng quá trình xác minh
+                    print(f"Cảnh báo: Không thể parse CRL từ database. Lỗi: {e}")
+        else:
+            print("Cảnh báo: Bỏ qua bước kiểm tra CRL vì không có kết nối tới database.")
 
         # Kiểm tra Public Key có khớp không
         # Lấy public key từ certificate đã được xác minh
