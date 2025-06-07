@@ -292,9 +292,22 @@ def sign_page():
             # qr_data = f"Signer: {signer_name}\nDate: {datetime.utcnow().isoformat()}Z"
 
             # signed_pdf_path = f'storage/sign/signed_{filename}'
+
+            os.makedirs('storage/sign', exist_ok=True)
             signed_pdf_path = os.path.join('storage/sign', f'signed_{filename}')
             qr_data = f"Signer: {signer_name}\nDate: {datetime.utcnow().isoformat()}Z"
-            embed_qrcode_and_metadata(pdf_path, qr_data, signed_pdf_path, signer_name, signature_b64_str, public_key_pem, cert_pem_str)
+            # signed_pdf_path = os.path.join('storage/sign', f'signed_{filename}')
+            # qr_data = f"Signer: {signer_name}\nDate: {datetime.utcnow().isoformat()}Z"
+            # embed_qrcode_and_metadata(pdf_path, qr_data, signed_pdf_path, signer_name, signature_b64_str, public_key_pem, cert_pem_str)
+            embed_qrcode_and_metadata(
+                pdf_path,  # Input là file gốc
+                qr_data,
+                signed_pdf_path, # Output là file mới
+                signer_name,
+                signature_b64_str,
+                public_key_pem,
+                cert_pem_str
+            )
 
             # Lưu metadata vào MongoDB
             db.signed_files.insert_one({

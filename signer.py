@@ -49,24 +49,26 @@ def extract_public_key(cert_pem_bytes):
 
 def hash_pdf_content(pdf_path):
     """
-    Tạo hash từ nội dung text và hình ảnh của file PDF.
-    Cách này ổn định hơn việc hash toàn bộ file.
+    Tạo hash CHỈ từ nội dung text của file PDF.
     """
     reader = PdfReader(pdf_path)
     hasher = hashlib.sha256()
     
     for page in reader.pages:
-        # Hash nội dung text của trang
-        hasher.update(page.extract_text().encode('utf-8'))
-
+        text = page.extract_text()
+        normalized_text = " ".join(text.split())
+        hasher.update(normalized_text.encode('utf-8'))
             
     return hasher.digest()
+
+            
+#     return hasher.digest()
 
 def sign_pdf(pdf_path, private_key_pem_bytes):
     import hashlib, subprocess, os
     digest = hash_pdf_content(pdf_path)
 
-    # # 1. Đọc nội dung PDF
+    # 1. Đọc nội dung PDF
     # with open(pdf_path, 'rb') as f:
     #     pdf_data = f.read()
 
@@ -144,23 +146,47 @@ def embed_qrcode_and_metadata(pdf_path, qr_data, output_pdf_path, signer_name, s
     img.save(qr_buffer, format='PNG')
     qr_buffer.seek(0)
 
+    qr_overlay_buffer = BytesIO()
+    c = canvas.Canvas(qr_overlay_buffer, pagesize=letter)
+    img_reader = ImageReader(qr_buffer)
+    c.drawImage(img_reader, 450, 50, width=100, height=100)
+    c.save()
+    qr_overlay_buffer.seek(0)
+
     # Vẽ QR lên trang PDF
-    draw_qr_on_pdf(pdf_path, qr_buffer, output_pdf_path)
+    # draw_qr_on_pdf(pdf_path, qr_buffer, output_pdf_path)
 
     # Thêm metadata
-    reader = PdfReader(output_pdf_path)
+    # reader = PdfReader(output_pdf_path)
+    # writer = PdfWriter()
+    reader_original = PdfReader(pdf_path)
+    reader_overlay = PdfReader(qr_overlay_buffer)
     writer = PdfWriter()
 
-    for page in reader.pages:
+    # for page in reader.pages:
+    #     writer.add_page(page)
+    for i, page in enumerate(reader_original.pages):
+        # Nếu là trang đầu tiên, merge QR code vào
+        if i == 0:
+            page.merge_page(reader_overlay.pages[0])
+        # Thêm trang (đã hoặc chưa merge) vào writer
         writer.add_page(page)
 
-    metadata = dict(reader.metadata or {})
-    metadata['/SignedBy'] = signer_name
-    metadata['/SignedAt'] = datetime.utcnow().isoformat() + "Z"
-    metadata['/SignatureAlgorithm'] = 'mldsa65'
-    metadata['/Signature'] = signature_b64
-    metadata['/PublicKey'] = public_key_pem.strip()
-    metadata['/Certificate'] = certificate_pem.strip() 
+    # metadata = dict(reader.metadata or {})
+    # metadata['/SignedBy'] = signer_name
+    # metadata['/SignedAt'] = datetime.utcnow().isoformat() + "Z"
+    # metadata['/SignatureAlgorithm'] = 'mldsa65'
+    # metadata['/Signature'] = signature_b64
+    # metadata['/PublicKey'] = public_key_pem.strip()
+    # metadata['/Certificate'] = certificate_pem.strip() 
+    metadata = {
+        '/SignedBy': signer_name,
+        '/SignedAt': datetime.utcnow().isoformat() + "Z",
+        '/SignatureAlgorithm': 'mldsa65',
+        '/Signature': signature_b64,
+        '/PublicKey': public_key_pem.strip(),
+        '/Certificate': certificate_pem.strip()
+    }
 
     writer.add_metadata(metadata)
 

@@ -15,12 +15,18 @@ CA_CERT_PATH = 'storage/ca/ca.crt'
 CA_CRL_PATH = 'storage/ca/crl.pem'
 
 def hash_pdf_content(pdf_path):
-
+    """
+    Tạo hash CHỈ từ nội dung text của file PDF.
+    """
     reader = PdfReader(pdf_path)
     hasher = hashlib.sha256()
     
     for page in reader.pages:
-        hasher.update(page.extract_text().encode('utf-8'))
+        # Lấy text và chuẩn hóa để loại bỏ các khác biệt nhỏ
+        text = page.extract_text()
+        # Thay thế nhiều ký tự xuống dòng/khoảng trắng thành một và loại bỏ khoảng trắng ở đầu/cuối
+        normalized_text = " ".join(text.split())
+        hasher.update(normalized_text.encode('utf-8'))
             
     return hasher.digest()
 
@@ -38,13 +44,13 @@ def verify_pdf(signed_pdf_path):
         'cert_valid_from': None,
         'cert_valid_to': None
     }
+
     try:
         # Trích xuất metadata từ PDF
         reader = PdfReader(signed_pdf_path)
-        
         metadata = reader.metadata
         if not all(k in metadata for k in ['/Signature', '/PublicKey', '/Certificate']):
-            return False, "PDF không chứa đủ thông tin chữ ký (Signature, PublicKey, Certificate)."
+            return False, "PDF không chứa đủ thông tin chữ ký (Signature, PublicKey, Certificate).", details
         
         details['signer'] = metadata.get('/SignedBy')
         # details['signed_at'] = metadata.get('/SignedAt')
@@ -70,7 +76,7 @@ def verify_pdf(signed_pdf_path):
         # Kiểm tra Certificate của người ký
         # Load Certificate của người ký (từ metadata) và của CA (từ file)
         if not os.path.exists(CA_CERT_PATH):
-            return False, "Không tìm thấy Certificate của CA để xác minh."
+            return False, "Không tìm thấy Certificate của CA để xác minh.", details
             
         signer_cert_obj = x509.load_pem_x509_certificate(certificate_pem.encode())
         details['cert_subject'] = signer_cert_obj.subject.rfc4514_string()
@@ -122,7 +128,7 @@ def verify_pdf(signed_pdf_path):
                 crl = x509.load_pem_x509_crl(crl_data)
                 for revoked_cert in crl:
                     if revoked_cert.serial_number == signer_cert_obj.serial_number:
-                        return False, f"Certificate đã bị thu hồi vào ngày {revoked_cert.revocation_date_utc}."
+                        return False, f"Certificate đã bị thu hồi vào ngày {revoked_cert.revocation_date_utc}.", details
 
         # Kiểm tra Public Key có khớp không
         # Lấy public key từ certificate đã được xác minh
@@ -140,14 +146,14 @@ def verify_pdf(signed_pdf_path):
         os.remove(signer_cert_filepath) # Dọn dẹp file tạm
 
         if result.returncode != 0:
-            return False, f"Không thể trích xuất public key từ certificate. Lỗi: {result.stderr}"
+            return False, f"Không thể trích xuất public key từ certificate. Lỗi: {result.stderr}", details
 
         # Lấy public key đã trích xuất từ certificate
         pubkey_from_cert_pem = result.stdout
 
         # So sánh với public key trong metadata
         if pubkey_from_cert_pem.strip() != public_key_pem.strip():
-            return False, "Public Key trong metadata không khớp với Public Key trong Certificate."
+            return False, "Public Key trong metadata không khớp với Public Key trong Certificate.", details
 
 
         # Xác minh chữ ký bằng Public Key (dùng OpenSSL)
@@ -182,10 +188,10 @@ def verify_pdf(signed_pdf_path):
         os.remove(pubkey_filepath)
         
         if "Signature Verified Successfully" not in result.stdout:
-            return False, f"Chữ ký không hợp lệ. Lỗi: {result.stderr}"
+            return False, f"Chữ ký không hợp lệ. Lỗi: {result.stderr}", details
 
     except Exception as e:
-        return False, f"Đã xảy ra lỗi trong quá trình xác minh: {str(e)}"
+        return False, f"Đã xảy ra lỗi trong quá trình xác minh: {str(e)}", details
 
     # Nếu tất cả các bước đều thành công
     return True, "Xác minh thành công! Chữ ký trên tài liệu là hợp lệ.", details
