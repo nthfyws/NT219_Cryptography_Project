@@ -654,3 +654,2144 @@ INFO:werkzeug:127.0.0.1 - - [01/Jun/2025 13:37:18] "[36mGET /static/js/script.j
 INFO:werkzeug:127.0.0.1 - - [01/Jun/2025 13:37:20] "GET /cert-lookup HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [01/Jun/2025 13:37:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [01/Jun/2025 13:37:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.11:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:42:37] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:42:37] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:42:37] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:42:37] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:42:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:43:12] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:43:12] "GET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:43:12] "GET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:43:12] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:43:12] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=7Y6iXYiyfMbfIo9kFaVR HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.11:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:46:27] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:46:28] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:46:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:46:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:46:31] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:46:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:46:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:46:41] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:46:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:46:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:50:50] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:50:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:50:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:50:58] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:50:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:50:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:51:01] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:51:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:51:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:51:47] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:51:47] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:51:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:51:47] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:51:52] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:51:52] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:51:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:51:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:51:57] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:51:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 16:51:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.11:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:05:34] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:05:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:05:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:05:50] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:05:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:05:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/create_pfx.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.11:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:09:56] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:09:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:09:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:10:19] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:10:19] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:10:19] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:10:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.11:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:02] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:02] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:02] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:02] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:02] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:02] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:02] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:02] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:02] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:02] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:02] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:02] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:17:15] "[32mGET /keygen HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:18:04] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:18:04] "[31m[1mPOST /dashboard HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:19:05] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:19:56] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:21:15] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:21:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:21:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:21:31] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:21:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:21:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:25:01] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:25:01] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:25:45] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:25:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:25:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:25:46] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:25:46] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:25:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:25:47] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:25:53] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:25:53] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:25:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:25:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:26:04] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:26:04] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:26:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:26:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:26:09] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:26:09] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:28:21] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:31:00] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:31:03] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:09] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:09] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:12] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:30] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:30] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:36] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:36] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:39] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:35:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.11:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:40:55] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:40:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:40:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:41:10] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:41:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:41:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:43:18] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:43:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:43:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:54:40] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:54:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:54:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:55:14] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:55:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:55:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:55:55] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:55:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 17:55:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.11:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 18:41:42] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 18:41:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 18:41:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 18:42:00] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 18:42:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 18:42:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 18:43:37] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 18:43:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 18:43:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 18:43:59] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 18:43:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 18:43:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 22:44:19] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 22:44:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 22:44:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 22:44:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 22:44:23] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 22:44:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 22:44:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 22:44:56] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 22:44:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 22:44:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 22:46:21] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 22:46:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 22:46:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 22:46:41] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 22:46:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 22:46:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:17:22] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:17:31] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:17:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:17:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:17:35] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:17:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:17:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:17:59] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:17:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:17:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:18:00] "GET /docs/signed_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:18:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:18:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:18:02] "GET /docs/download/signed_unsigned.pdf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:18:09] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:18:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:18:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:18:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:18:17] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:18:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:18:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:39:54] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:39:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:39:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:39:59] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:39:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:39:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:40:04] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:40:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:40:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:45:43] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:45:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:45:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:45:50] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:45:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:45:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:46:21] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:46:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:46:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:50:51] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:50:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:50:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:50:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:52:18] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:52:18] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:52:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:52:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:53:04] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:53:04] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:53:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:53:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:53:08] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:53:38] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:53:38] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:53:38] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:53:38] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=7vCnKFRLh2ouLhcNcMin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:53:51] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:53:53] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:53:53] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:53:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:53:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:54:27] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:54:27] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:54:27] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:54:27] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=7vCnKFRLh2ouLhcNcMin HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:56:16] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:57:03] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:57:03] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:57:03] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:57:03] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=KC3N3hapudtOnaydJfg7 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:58:17] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:58:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:58:51] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:58:51] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:58:51] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:58:51] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=4h1hlsnEOceCpDwlmqkE HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:59:39] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:59:41] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:59:41] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:59:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2025 23:59:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:00:16] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:00:16] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:00:16] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:00:16] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=URl3VmDWuspq3FrhTpxn HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:04:00] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:04:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:04:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:04:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:04:13] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:04:35] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:04:35] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:04:35] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:04:35] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=ZFz8Cys5bek7GbV08GDq HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:06:43] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:06:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:06:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:06:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:07:19] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:07:19] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:07:19] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:07:19] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=9cy7aef8YWb1OAk0tble HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:13:30] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:13:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:14:08] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:14:08] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:14:08] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:14:08] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=2kEcQupQb2ZGLGGUSEtb HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:14:11] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:14:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:14:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:14:46] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:14:46] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:14:46] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 00:14:46] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=2kEcQupQb2ZGLGGUSEtb HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:28:31] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:28:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:28:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:28:49] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:29:11] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:29:11] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:29:11] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:29:11] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=aEGaz3l5BhL02r0yWtMS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:30:02] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:32:09] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:32:09] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:32:09] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:32:09] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=aEGaz3l5BhL02r0yWtMS HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:32:45] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:32:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:33:18] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:33:18] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:33:18] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:33:18] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=aEGaz3l5BhL02r0yWtMS HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 117-525-679
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:39:03] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:39:03] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:39:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:39:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:39:38] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:39:38] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:39:38] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:39:38] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=xxPF7Q7MWdTb0s8txTwb HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:44:15] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:44:15] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:44:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:44:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:44:20] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:44:21] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:44:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:44:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:44:26] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:44:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:44:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:44:33] "[35m[1mPOST /verify/upload HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:44:33] "GET /verify/upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:44:33] "GET /verify/upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:44:33] "GET /verify/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:44:33] "GET /verify/upload?__debugger__=yes&cmd=resource&f=console.png&s=aTqtxy4gM7cAICoMvbNJ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:20] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:24] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:24] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:43] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:43] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:48] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:48] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:50] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:45:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:46:08] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:46:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:46:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:51:28] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:51:32] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:51:32] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:51:32] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:51:32] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:52:10] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:52:10] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:52:10] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:52:10] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=NcTZ2c7b2LL6eWK0Hv9k HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:59:40] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:59:41] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:59:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:59:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:59:48] "GET /docs/signed_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:59:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:59:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:59:49] "GET /docs/download/signed_unsigned.pdf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:59:54] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:59:54] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:59:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:59:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:59:59] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:59:59] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:59:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 01:59:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:00:01] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:00:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:00:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:00:09] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:00:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:00:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:04:36] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:04:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:04:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:04:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:04:44] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:04:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:04:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:10:04] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:10:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:10:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:34:54] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:34:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:34:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:34:58] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:34:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:34:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:37:20] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:37:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:37:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:37:28] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:37:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:37:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:48:46] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:48:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:48:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:48:50] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:48:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:48:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:50:40] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:50:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:50:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:51:45] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:51:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:51:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:51:50] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:51:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 02:51:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:05:09] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:05:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:05:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:05:12] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:05:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:05:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:09:57] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:09:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:09:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:10:33] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:10:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:10:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:14:57] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:14:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:14:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:14:59] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:14:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 03:14:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:26:57] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:26:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:26:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:27:01] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:27:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:27:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:28:35] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:28:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:28:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:28:39] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:28:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:28:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:28:54] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:28:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:28:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:32:47] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:32:47] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:32:47] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:32:50] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:32:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:32:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:32:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:34:07] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:34:07] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:34:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:34:16] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:34:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:34:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:35:13] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:35:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:35:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:35:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:41:17] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:41:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:41:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:41:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:41:21] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:41:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:41:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:44:22] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:44:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:44:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:44:27] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:44:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:44:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:47:00] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:47:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:47:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:48:10] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:48:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:48:10] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:48:43] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:48:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:48:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:50:12] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:50:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:50:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:50:15] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:50:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:50:15] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:51:21] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:51:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:51:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:53:21] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:53:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:53:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:54:41] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:54:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:54:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:58:04] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:58:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 09:58:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:03:05] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:03:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:03:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:03:44] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:03:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:03:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:04:37] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:04:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:04:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:06:41] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:06:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:06:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:06:44] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:06:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:06:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:09:24] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:09:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:09:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:14:54] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:14:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:14:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:16:03] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:16:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:16:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:20:24] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:20:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:20:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:20:36] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:20:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:20:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:22:06] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:22:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:22:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:23:27] "[35m[1mPOST /verify/upload HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:23:27] "[36mGET /verify/upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:23:27] "[36mGET /verify/upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:23:27] "GET /verify/upload?__debugger__=yes&cmd=resource&f=console.png&s=IBELwGMAXm3aDGqw4cBs HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:24:11] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:24:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:24:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:25:35] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:25:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:25:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:32:21] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:32:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:32:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:33:28] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:33:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:33:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:37:47] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:37:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:37:47] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:37:55] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:37:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:37:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:42:46] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:42:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:42:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:50:56] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:50:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:50:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:00] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:02] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:02] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:08] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:08] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:08] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:08] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:10] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:27] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:55] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:51:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:56:09] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:56:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:56:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:56:26] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:56:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:56:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:57:52] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:57:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:57:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:59:03] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:59:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 10:59:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:02:06] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:02:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:02:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:02:24] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:02:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:02:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:05:38] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:05:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:05:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:05:49] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:04] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:04] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:18] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:19] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:23] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:24] "GET /docs/signed_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:36] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:06:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:09] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:14] "GET /docs/signed_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:36] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:36] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:40] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:40] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:43] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:50] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:07:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:10:16] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:10:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:10:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:10:20] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:10:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:10:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:14:57] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:14:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:14:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:14:58] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:14:58] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:14:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:14:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:15:04] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:15:05] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:15:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:15:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:15:08] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:15:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:15:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:15:27] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:15:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:15:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:16:59] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:17:08] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:17:08] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:17:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:17:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:17:13] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:17:15] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:17:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:17:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:17:17] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:17:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:17:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:17:23] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:17:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:17:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:19:47] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:19:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:19:47] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:19:53] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:19:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:19:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:20:29] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:20:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:20:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:20:35] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:20:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:20:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:23:35] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:23:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:23:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:26:34] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:26:34] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:26:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:26:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:26:39] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:26:40] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:26:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:26:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:26:42] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:26:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:26:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:27:02] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:27:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:27:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:29:56] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:29:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:29:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:30:24] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:30:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:30:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:33:16] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:33:21] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:33:21] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:33:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:33:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:33:25] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:33:26] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:33:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:33:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:33:29] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:33:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:33:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:33:35] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:33:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:33:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:40:35] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:40:35] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:40:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:40:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:40:40] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:40:41] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:40:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:40:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:40:43] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:40:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:40:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:40:57] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:40:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:40:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:48:25] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:48:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:48:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:48:52] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:48:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:48:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:52:10] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:52:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:52:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:52:48] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:52:52] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:52:52] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:52:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:52:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:53:00] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:53:01] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:53:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:53:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:53:03] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:53:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:53:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:53:08] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:53:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:53:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:18] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:18] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:25] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:26] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:28] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:45] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:49] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:49] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:53] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:53] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:55] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:58:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:59:01] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:59:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 11:59:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:08] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:08] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:13] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:14] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:16] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:33] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:37] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:37] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:40] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:40] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:42] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:48] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:04:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:06:44] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:06:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:06:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:10:37] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:10:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:10:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:10:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:16:12] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:16:12] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:16:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:16:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:16:17] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:16:18] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:16:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:16:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:16:25] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:16:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:16:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:16:39] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:16:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:16:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:35:24] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:35:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:35:24] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:38:29] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:38:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:38:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:42:06] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:42:10] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:42:10] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:42:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:42:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:42:15] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:42:16] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:42:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:42:16] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:42:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:42:18] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:42:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:42:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:42:24] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:42:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:42:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 294-326-343
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:44:33] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:44:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:44:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:07] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:07] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:12] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:14] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:15] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:33] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:37] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:37] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:41] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:41] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:42] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:48] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 12:47:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:04:18] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:04:18] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:04:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:04:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:04:52] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:04:52] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:04:52] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:04:52] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=SMMWt4KGdvqjIIaxdFTT HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:04:54] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:05:27] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:05:27] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:05:27] "GET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:05:27] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=SMMWt4KGdvqjIIaxdFTT HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:10:29] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:10:30] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:10:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:10:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:10:34] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:10:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:10:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:10:57] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:03] "GET /docs/signed_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:03] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:12] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:12] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:16] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:16] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:18] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:25] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:11:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:16:51] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:16:51] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:16:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:16:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:16:56] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:16:57] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:16:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:16:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:16:59] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:16:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:16:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:17:20] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:17:25] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:17:25] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:17:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:17:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:17:29] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:17:29] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:17:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:17:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:17:32] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:17:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:17:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:17:38] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:17:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:17:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:21:53] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:21:53] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:21:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:21:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:21:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:21:57] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:21:58] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:21:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:21:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:22:00] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:22:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:22:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:22:17] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:22:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:22:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:25:49] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:25:54] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:25:54] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:25:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:25:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:25:58] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:25:59] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:25:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:25:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:26:01] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:26:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:26:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:26:05] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:26:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:26:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:28:58] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:28:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:28:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:31:20] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:31:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:31:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:33:30] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:33:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:33:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:08] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:08] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:11] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:12] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:15] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:33] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:38] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:38] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:44] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:44] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:46] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:52] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:39:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/signer.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:54:50] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:54:50] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:54:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:54:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:54:55] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:54:56] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:54:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:54:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:54:58] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:54:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:54:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:55:14] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:55:19] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:55:19] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:55:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:55:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:55:23] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:55:23] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:55:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:55:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:55:24] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:55:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:55:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:55:30] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:55:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:55:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 14:59:48] "[33mGET /api/crl HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:00:23] "[33mGET /api/crl HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:00:30] "[33mGET /verify/qr HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:03:52] "[33mGET /verify/qr HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:03:56] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:03:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:03:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:03:59] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:03:59] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:03:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:03:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:05] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:06] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:10] "GET /docs/signed_files HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:14] "GET /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:14] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:33] "POST /docs/sign HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:37] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:37] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:40] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:40] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:42] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:48] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:04:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:13:39] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:13:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:13:39] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:13:49] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:13:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:13:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:13:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:13:50] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:13:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:13:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:13:59] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:13:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:13:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.5:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:24:29] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:24:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:24:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:24:35] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:24:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:24:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/phuonggiang/MatMaHoc/DOAN/NT219_Cryptography_Project/verify.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-737-680
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:26:13] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:26:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:26:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:28:36] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:28:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:28:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:11] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:11] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:11] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:19] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:20] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:23] "GET /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:30] "POST /verify/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:35] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:35] "GET /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jun/2025 15:32:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -

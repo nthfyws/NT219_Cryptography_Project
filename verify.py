@@ -8,6 +8,7 @@ from PyPDF2 import PdfReader, PdfWriter
 from cryptography import x509
 from cryptography.hazmat.primitives import serialization
 from io import BytesIO
+from dateutil import parser
 
 # Đường dẫn tới các file của CA
 CA_CERT_PATH = 'storage/ca/ca.crt'
@@ -46,7 +47,16 @@ def verify_pdf(signed_pdf_path):
             return False, "PDF không chứa đủ thông tin chữ ký (Signature, PublicKey, Certificate)."
         
         details['signer'] = metadata.get('/SignedBy')
-        details['signed_at'] = metadata.get('/SignedAt')
+        # details['signed_at'] = metadata.get('/SignedAt')
+        signed_at_iso = metadata.get('/SignedAt')
+        if signed_at_iso:
+            try:
+                # Parse chuỗi ISO thành đối tượng datetime
+                dt_obj = parser.isoparse(signed_at_iso)
+                # Định dạng lại theo kiểu Việt Nam
+                details['signed_at'] = dt_obj.strftime('%H:%M:%S ngày %d-%m-%Y')
+            except (ValueError, TypeError):
+                details['signed_at'] = signed_at_iso # Giữ nguyên nếu không parse được
         details['algorithm'] = metadata.get('/SignatureAlgorithm')
 
         signature_b64 = metadata['/Signature']
@@ -65,8 +75,15 @@ def verify_pdf(signed_pdf_path):
         signer_cert_obj = x509.load_pem_x509_certificate(certificate_pem.encode())
         details['cert_subject'] = signer_cert_obj.subject.rfc4514_string()
         details['cert_issuer'] = signer_cert_obj.issuer.rfc4514_string()
-        details['cert_valid_from'] = signer_cert_obj.not_valid_before.isoformat()
-        details['cert_valid_to'] = signer_cert_obj.not_valid_after.isoformat()
+
+        valid_from_dt = signer_cert_obj.not_valid_before
+        valid_to_dt = signer_cert_obj.not_valid_after
+        
+        details['cert_valid_from'] = valid_from_dt.strftime('%H:%M:%S ngày %d-%m-%Y')
+        details['cert_valid_to'] = valid_to_dt.strftime('%H:%M:%S ngày %d-%m-%Y')
+
+        # details['cert_valid_from'] = signer_cert_obj.not_valid_before.isoformat()
+        # details['cert_valid_to'] = signer_cert_obj.not_valid_after.isoformat()
 
         # Kiểm tra xem Certificate có được ký bởi CA không (dùng OpenSSL)
         # Dùng file tạm để OpenSSL có thể đọc
