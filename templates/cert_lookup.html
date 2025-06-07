@@ -125,7 +125,14 @@
                     Tải về CA Certificate
                 </a>
                 <div class="collapse" id="ca_cert_collapse">
-                    <pre style="font-size: 0.9em; background: #f8f9fa; border: 1px solid #dee2e6; padding: 10px;">{{ ca_cert_pem }}</pre>
+                    {% if ca_cert_details %}
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item"><strong>Chủ thể (Subject):</strong> {{ ca_cert_details.cert_subject }}</li>
+                        <li class="list-group-item"><strong>Nhà cung cấp (Issuer):</strong> {{ ca_cert_details.cert_issuer }}</li>
+                        <li class="list-group-item"><strong>Hiệu lực từ:</strong> {{ ca_cert_details.cert_valid_from }}</li>
+                        <li class="list-group-item"><strong>Hiệu lực đến:</strong> {{ ca_cert_details.cert_valid_to }}</li>
+                    </ul>
+                    {% endif %}
                 </div>
             </div>
         </div>
