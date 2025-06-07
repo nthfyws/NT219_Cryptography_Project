@@ -224,16 +224,28 @@ def cert_lookup_page():
         except Exception:
             cert_details["cert_pem"] = cert_details["cert_data"]
 
-    # Giải mã ca_cert nếu là base64
-    ca_cert_pem = None
+    # Parse CA cert để lấy thông tin chi tiết
+    ca_cert_details = None
     if ca_cert:
         try:
-            ca_cert_pem = base64.b64decode(ca_cert).decode()
+            ca_cert_obj = x509.load_pem_x509_certificate(ca_cert.encode())
+            ca_cert_details = {
+                "cert_subject": ca_cert_obj.subject.rfc4514_string(),
+                "cert_issuer": ca_cert_obj.issuer.rfc4514_string(),
+                "cert_valid_from": ca_cert_obj.not_valid_before.strftime('%d/%m/%Y %H:%M:%S'),
+                "cert_valid_to": ca_cert_obj.not_valid_after.strftime('%d/%m/%Y %H:%M:%S')
+            }
         except Exception:
-            ca_cert_pem = ca_cert
+            ca_cert_details = None
 
-    return render_template('cert_lookup.html', certs=certs, cert_details=cert_details, org_id=org_id, ca_cert_pem=ca_cert_pem)
-
+    return render_template(
+        'cert_lookup.html',
+        certs=certs,
+        cert_details=cert_details,
+        org_id=org_id,
+        ca_cert_pem=ca_cert,  # Gán ca_cert_pem = ca_cert (PEM string)
+        ca_cert_details=ca_cert_details
+    )
 @app.route('/download-cert/<org_id>')
 @login_required
 def download_cert(org_id):
