@@ -18,7 +18,9 @@ def extract_private_key(pfx_path, passphrase):
         '-in', pfx_path,
         '-nocerts',
         '-nodes',
-        '-passin', f'pass:{passphrase}'
+        '-passin', f'pass:{passphrase}',
+        '-provider', 'oqsprovider',
+        '-provider', 'default'
     ]
     result = subprocess.run(cmd, capture_output=True)
     if result.returncode != 0:
@@ -32,7 +34,9 @@ def extract_cert(pfx_path, passphrase):
         '-in', pfx_path,
         '-clcerts',
         '-nokeys',
-        '-passin', f'pass:{passphrase}'
+        '-passin', f'pass:{passphrase}',
+        '-provider', 'oqsprovider',
+        '-provider', 'default'
     ]
     result = subprocess.run(cmd, capture_output=True)
     if result.returncode != 0:
@@ -109,7 +113,7 @@ def sign_pdf(pdf_path, private_key_pem_bytes):
         signature = f.read()
     os.remove(sig_file)
 
-    return signature
+    return signature, digest
 
 def draw_qr_on_pdf(original_pdf_path, qr_img, output_path):
     # Tạo một PDF chứa QR code
@@ -134,7 +138,7 @@ def draw_qr_on_pdf(original_pdf_path, qr_img, output_path):
 
     os.remove(qr_pdf_path)
 
-def embed_qrcode_and_metadata(pdf_path, qr_data, output_pdf_path, signer_name, signature_b64, public_key_pem, certificate_pem):
+def embed_qrcode_and_metadata(pdf_path, qr_data, output_pdf_path, signer_name, signature_b64, public_key_pem, certificate_pem, original_hash_b64):
     # QR tạo từ qrcode lib
     qr = qrcode.QRCode(box_size=3, border=1)
     qr.add_data(qr_data)
@@ -185,7 +189,8 @@ def embed_qrcode_and_metadata(pdf_path, qr_data, output_pdf_path, signer_name, s
         '/SignatureAlgorithm': 'mldsa65',
         '/Signature': signature_b64,
         '/PublicKey': public_key_pem.strip(),
-        '/Certificate': certificate_pem.strip()
+        '/Certificate': certificate_pem.strip(),
+        '/OriginalHash': original_hash_b64
     }
 
     writer.add_metadata(metadata)

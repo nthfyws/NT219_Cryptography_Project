@@ -273,8 +273,10 @@ def sign_page():
             # Extract private key và cert tự ký
             private_key_pem = extract_private_key(pfx_path, passphrase)
 
-            signature_bytes = sign_pdf(pdf_path, private_key_pem)
+            # signature_bytes = sign_pdf(pdf_path, private_key_pem)
+            signature_bytes, original_hash_bytes = sign_pdf(pdf_path, private_key_pem)
             signature_b64_str = base64.b64encode(signature_bytes).decode('utf-8')
+            original_hash_b64_str = base64.b64encode(original_hash_bytes).decode('utf-8')
 
             with open(cert_path, 'rb') as f:
                 cert_pem_bytes = f.read()
@@ -293,7 +295,7 @@ def sign_page():
 
             # signed_pdf_path = f'storage/sign/signed_{filename}'
 
-            os.makedirs('storage/sign', exist_ok=True)
+            os.makedirs('storage/signed', exist_ok=True)
             signed_pdf_path = os.path.join('storage/sign', f'signed_{filename}')
             qr_data = f"Signer: {signer_name}\nDate: {datetime.utcnow().isoformat()}Z"
             # signed_pdf_path = os.path.join('storage/sign', f'signed_{filename}')
@@ -306,7 +308,8 @@ def sign_page():
                 signer_name,
                 signature_b64_str,
                 public_key_pem,
-                cert_pem_str
+                cert_pem_str,
+                original_hash_b64_str
             )
 
             # Lưu metadata vào MongoDB
@@ -318,8 +321,11 @@ def sign_page():
                 'signed_time': datetime.utcnow(),
                 'signature_b64': signature_b64_str,
                 'public_key_pem': public_key_pem,
-                'certificate_pem': cert_pem_str
+                'certificate_pem': cert_pem_str,
+                'original_hash_b64': original_hash_b64_str
             })
+            os.remove(pdf_path)
+            os.remove(pfx_path)
 
             return send_file(signed_pdf_path, as_attachment=True)
 
@@ -368,7 +374,7 @@ def verify_page():
         pdf_file = request.files.get('signed_pdf')
         if not pdf_file or pdf_file.filename == '':
             result = False
-            message = 'Vui lòng chọn một file PDF để xác minh.'
+            message = 'Please select a PDF file to verify.'
         else:
             # Tạo thư mục tạm nếu chưa có
             os.makedirs("temp_uploads", exist_ok=True)
@@ -385,7 +391,7 @@ def verify_page():
                 details = verification_details
             except Exception as e:
                 result = False
-                message = f"Lỗi không xác định: {e}"
+                message = f"An unknown error occurred: {e}"
             finally:
                 # Xóa file tạm sau khi xử lý xong
                 if os.path.exists(file_path):

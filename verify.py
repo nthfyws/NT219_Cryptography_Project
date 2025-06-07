@@ -50,8 +50,8 @@ def verify_pdf(signed_pdf_path):
         # Trích xuất metadata từ PDF
         reader = PdfReader(signed_pdf_path)
         metadata = reader.metadata
-        if not all(k in metadata for k in ['/Signature', '/PublicKey', '/Certificate']):
-            return False, "PDF không chứa đủ thông tin chữ ký (Signature, PublicKey, Certificate).", details
+        if not all(k in metadata for k in ['/Signature', '/PublicKey', '/Certificate', '/OriginalHash']):
+            return False, "Verification failed: PDF is missing required signature information (Signature, PublicKey, Certificate, OriginalHash).", details
         
         details['signer'] = metadata.get('/SignedBy')
         # details['signed_at'] = metadata.get('/SignedAt')
@@ -63,7 +63,7 @@ def verify_pdf(signed_pdf_path):
                 # Định dạng lại theo kiểu Việt Nam
                 vn_timezone = timezone(timedelta(hours=7))
                 dt_obj_vn = dt_obj.astimezone(vn_timezone)
-                details['signed_at'] = dt_obj_vn.strftime('%H:%M:%S ngày %d-%m-%Y')
+                details['signed_at'] = dt_obj_vn.strftime('%Y-%m-%d %H:%M:%S %Z')
             except (ValueError, TypeError):
                 details['signed_at'] = signed_at_iso # Giữ nguyên nếu không parse được
         details['algorithm'] = metadata.get('/SignatureAlgorithm')
@@ -71,15 +71,19 @@ def verify_pdf(signed_pdf_path):
         signature_b64 = metadata['/Signature']
         public_key_pem = metadata['/PublicKey']
         certificate_pem = metadata['/Certificate']
+        original_hash_b64 = metadata['/OriginalHash']
+
         signature = base64.b64decode(signature_b64)
-        
+        original_hash = base64.b64decode(original_hash_b64)
         
         current_hash = hash_pdf_content(signed_pdf_path)
-
+        
+        if current_hash != original_hash:
+            return False, "Verification failed: The document's content has been altered after it was signed.", details
         # Kiểm tra Certificate của người ký
         # Load Certificate của người ký (từ metadata) và của CA (từ file)
         if not os.path.exists(CA_CERT_PATH):
-            return False, "Không tìm thấy Certificate của CA để xác minh.", details
+            return False, "Verification failed: The Certificate Authority (CA) certificate could not be found.", details
             
         signer_cert_obj = x509.load_pem_x509_certificate(certificate_pem.encode())
         details['cert_subject'] = signer_cert_obj.subject.rfc4514_string()
@@ -92,8 +96,8 @@ def verify_pdf(signed_pdf_path):
         valid_from_vn = valid_from_dt.astimezone(vn_timezone)
         valid_to_vn = valid_to_dt.astimezone(vn_timezone)
 
-        details['cert_valid_from'] = valid_from_vn.strftime('%H:%M:%S ngày %d-%m-%Y')
-        details['cert_valid_to'] = valid_to_vn.strftime('%H:%M:%S ngày %d-%m-%Y')
+        details['cert_valid_from'] = valid_from_vn.strftime('%Y-%m-%d %H:%M:%S %Z')
+        details['cert_valid_to'] = valid_to_vn.strftime('%Y-%m-%d %H:%M:%S %Z')
 
         # details['cert_valid_from'] = signer_cert_obj.not_valid_before.isoformat()
         # details['cert_valid_to'] = signer_cert_obj.not_valid_after.isoformat()
@@ -113,7 +117,7 @@ def verify_pdf(signed_pdf_path):
         os.remove(signer_cert_filepath) # Dọn dẹp file tạm
         
         if result.returncode != 0:
-            message = f"Xác minh chuỗi chứng chỉ thất bại: Certificate không được CA tin cậy ký. Lỗi: {result.stderr}"
+            message = f"Certificate chain verification failed: The certificate was not signed by a trusted CA. Error: {result.stderr}"
             return False, message, details
 
         # Kiểm tra thời hạn của Certificate
@@ -126,7 +130,7 @@ def verify_pdf(signed_pdf_path):
             not_valid_after = not_valid_after.replace(tzinfo=timezone.utc)
 
         if not (not_valid_before <= now <= not_valid_after):
-            return False, "Certificate đã hết hạn hoặc chưa có hiệu lực.", details
+            return False, "Verification failed: The signer's certificate has expired or is not yet valid.", details
         
         # Kiểm tra Certificate có trong danh sách thu hồi (CRL) không
         # if os.path.exists(CA_CRL_PATH):
@@ -150,12 +154,12 @@ def verify_pdf(signed_pdf_path):
                     for revoked_cert in crl:
                         if revoked_cert.serial_number == signer_cert_obj.serial_number:
                             revocation_dt_str = revoked_cert.revocation_date.strftime('%H:%M:%S ngày %d-%m-%Y')
-                            return False, f"Certificate đã bị thu hồi vào ngày {revocation_dt_str}.", details
+                            return False, f"Verification failed: The signer's certificate was revoked on {revocation_dt_str}.", details
                 except Exception as e:
                 # Ghi nhận lỗi nếu không parse được CRL, nhưng không làm dừng quá trình xác minh
-                    print(f"Cảnh báo: Không thể parse CRL từ database. Lỗi: {e}")
+                    print(f"Could not parse CRL from database. Error: {e}")
         else:
-            print("Cảnh báo: Bỏ qua bước kiểm tra CRL vì không có kết nối tới database.")
+            print("Warning: Skipping CRL check due to no database connection.")
 
         # Kiểm tra Public Key có khớp không
         # Lấy public key từ certificate đã được xác minh
@@ -173,14 +177,14 @@ def verify_pdf(signed_pdf_path):
         os.remove(signer_cert_filepath) # Dọn dẹp file tạm
 
         if result.returncode != 0:
-            return False, f"Không thể trích xuất public key từ certificate. Lỗi: {result.stderr}", details
+            return False, f"Verification failed: Could not extract public key from the certificate. Error: {result.stderr}", details
 
         # Lấy public key đã trích xuất từ certificate
         pubkey_from_cert_pem = result.stdout
 
         # So sánh với public key trong metadata
         if pubkey_from_cert_pem.strip() != public_key_pem.strip():
-            return False, "Public Key trong metadata không khớp với Public Key trong Certificate.", details
+            return False, "Verification failed: The public key in the metadata does not match the public key in the certificate.", details
 
 
         # Xác minh chữ ký bằng Public Key (dùng OpenSSL)
@@ -189,7 +193,8 @@ def verify_pdf(signed_pdf_path):
              tempfile.NamedTemporaryFile(delete=False) as sig_file, \
              tempfile.NamedTemporaryFile(mode='w+', delete=False) as pubkey_file:
             
-            hash_file.write(current_hash)
+            # hash_file.write(current_hash)
+            hash_file.write(original_hash)
             sig_file.write(signature)
             pubkey_file.write(public_key_pem)
 
@@ -215,10 +220,11 @@ def verify_pdf(signed_pdf_path):
         os.remove(pubkey_filepath)
         
         if "Signature Verified Successfully" not in result.stdout:
-            return False, f"Chữ ký không hợp lệ. Lỗi: {result.stderr}", details
+            return False, f"Verification failed: The signature is invalid or corrupted. Error: {result.stderr}", details
+        
 
     except Exception as e:
-        return False, f"Đã xảy ra lỗi trong quá trình xác minh: {str(e)}", details
+        return False, f"An unexpected error occurred during verification: {str(e)}", details
 
     # Nếu tất cả các bước đều thành công
-    return True, "Xác minh thành công! Chữ ký trên tài liệu là hợp lệ.", details
+    return True, "Verification successful: The signature is valid and the document has not been altered.", details

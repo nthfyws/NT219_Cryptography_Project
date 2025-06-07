@@ -8,32 +8,32 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h3>Xác minh tài liệu đã ký</h3>
+                    <h3>Verify Signed Document</h3>
                 </div>
                 <div class="card-body">
-                    <p>Tải lên file PDF đã được ký số để kiểm tra tính hợp lệ của chữ ký.</p>
+                    <p>Upload a digitally signed PDF file to check the validity of its signature.</p>
                     
                     <form method="POST" enctype="multipart/form-data" action="{{ url_for('verify_page') }}">
                         <div class="mb-3">
-                            <label for="signed_pdf" class="form-label">Chọn file PDF đã ký</label>
+                            <label for="signed_pdf" class="form-label">Select Signed PDF File</label>
                             <input class="form-control" type="file" id="signed_pdf" name="signed_pdf" accept=".pdf" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Xác minh</button>
+                        <button type="submit" class="btn btn-primary">Verify</button>
                     </form>
                 </div>
             </div>
 
             {% if result is not none %}
             <div class="mt-4">
-                <h4>Kết quả xác minh:</h4>
+                <h4>Verification Result:</h4>
                 {% if result %}
                 <div class="alert alert-success" role="alert">
-                    <h5 class="alert-heading"><i class="fas fa-check-circle"></i> Hợp lệ!</h5>
+                    <h5 class="alert-heading"><i class="fas fa-check-circle"></i> Valid!</h5>
                     <p>{{ message }}</p>
                 </div>
                 {% else %}
                 <div class="alert alert-danger" role="alert">
-                    <h5 class="alert-heading"><i class="fas fa-times-circle"></i> Không hợp lệ!</h5>
+                    <h5 class="alert-heading"><i class="fas fa-times-circle"></i> Invalid!</h5>
                     <p>{{ message }}</p>
                 </div>
                 {% endif %}
@@ -42,23 +42,23 @@
                 {% if details %}
                 <div class="card mt-3">
                     <div class="card-header">
-                        Thông tin chữ ký
+                        Signature Information
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><strong>Người ký:</strong> {{ details.signer }}</li>
-                        <li class="list-group-item"><strong>Thời gian ký:</strong> {{ details.signed_at }}</li>
-                        <li class="list-group-item"><strong>Thuật toán:</strong> {{ details.algorithm }}</li>
+                        <li class="list-group-item"><strong>Signer:</strong> {{ details.signer }}</li>
+                        <li class="list-group-item"><strong>Signed At:</strong> {{ details.signed_at }}</li>
+                        <li class="list-group-item"><strong>Algorithm:</strong> {{ details.algorithm }}</li>
                     </ul>
                 </div>
                 <div class="card mt-3">
                     <div class="card-header">
-                        Thông tin chứng chỉ số
+                        Certificate Information
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><strong>Chủ thể (Subject):</strong> {{ details.cert_subject }}</li>
-                        <li class="list-group-item"><strong>Nhà cung cấp (Issuer):</strong> {{ details.cert_issuer }}</li>
-                        <li class="list-group-item"><strong>Hiệu lực từ:</strong> {{ details.cert_valid_from }}</li>
-                        <li class="list-group-item"><strong>Hiệu lực đến:</strong> {{ details.cert_valid_to }}</li>
+                        <li class="list-group-item"><strong>Subject:</strong> {{ details.cert_subject }}</li>
+                        <li class="list-group-item"><strong>Issuer:</strong> {{ details.cert_issuer }}</li>
+                        <li class="list-group-item"><strong>Valid from:</strong> {{ details.cert_valid_from }}</li>
+                        <li class="list-group-item"><strong>Valid to:</strong> {{ details.cert_valid_to }}</li>
                     </ul>
                 </div>
                 {% endif %}
