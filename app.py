@@ -34,7 +34,6 @@ CA_PASSPHRASE = os.getenv("CA_PASSPHRASE")
 # Init Flask
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY")
-print("FLASK_SECRET_KEY =", os.getenv("FLASK_SECRET_KEY"))
 
 app.register_blueprint(auth_bp, url_prefix='/auth')
 app.register_blueprint(dashboard_bp)
@@ -256,6 +255,11 @@ def sign_page():
             passphrase = request.form['passphrase']
             signer_name = session.get('user', 'Unknown')
 
+            cert_path = f'storage/certs/{signer_name}.crt'
+            if not os.path.exists(cert_path):
+                flash(f"Không tìm thấy chứng chỉ đã được CA cấp cho '{signer_name}'. Vui lòng yêu cầu CA cấp chứng chỉ trước.", 'danger')
+                return render_template('sign.html')
+
             filename = secure_filename(pdf_file.filename)
             pfx_filename = secure_filename(pfx_file.filename)
 
@@ -268,20 +272,29 @@ def sign_page():
 
             # Extract private key và cert tự ký
             private_key_pem = extract_private_key(pfx_path, passphrase)
-            cert_pem = extract_cert(pfx_path, passphrase)
+
+            signature_bytes = sign_pdf(pdf_path, private_key_pem)
+            signature_b64_str = base64.b64encode(signature_bytes).decode('utf-8')
+
+            with open(cert_path, 'rb') as f:
+                cert_pem_bytes = f.read()
+
+            cert_pem_str = cert_pem_bytes.decode('utf-8')
 
             # Lấy public key từ cert
-            public_key_pem = extract_public_key(cert_pem)
+            public_key_pem = extract_public_key(cert_pem_bytes)
 
             # Ký file PDF
-            signature = sign_pdf(pdf_path, private_key_pem)
-            signature_b64 = base64.b64encode(signature).decode()
+            # signature = sign_pdf(pdf_path, private_key_pem)
+            # signature_b64 = base64.b64encode(signature).decode()
 
             # Tạo QR code dữ liệu: tên người ký + thời gian
-            qr_data = f"Signer: {signer_name}\nDate: {datetime.utcnow().isoformat()}Z"
+            # qr_data = f"Signer: {signer_name}\nDate: {datetime.utcnow().isoformat()}Z"
 
-            signed_pdf_path = f'storage/sign/signed_{filename}'
-            embed_qrcode_and_metadata(pdf_path, qr_data, signed_pdf_path, signer_name, signature_b64, public_key_pem, cert_pem)
+            # signed_pdf_path = f'storage/sign/signed_{filename}'
+            signed_pdf_path = os.path.join('storage/sign', f'signed_{filename}')
+            qr_data = f"Signer: {signer_name}\nDate: {datetime.utcnow().isoformat()}Z"
+            embed_qrcode_and_metadata(pdf_path, qr_data, signed_pdf_path, signer_name, signature_b64_str, public_key_pem, cert_pem_str)
 
             # Lưu metadata vào MongoDB
             db.signed_files.insert_one({
@@ -290,9 +303,9 @@ def sign_page():
                 'signer': signer_name,
                 'ispublic': False,
                 'signed_time': datetime.utcnow(),
-                'signature_b64': signature_b64,
+                'signature_b64': signature_b64_str,
                 'public_key_pem': public_key_pem,
-                'certificate_pem': cert_pem
+                'certificate_pem': cert_pem_str
             })
 
             return send_file(signed_pdf_path, as_attachment=True)
@@ -337,23 +350,35 @@ def public_files_page():
 def verify_page():
     result = None
     message = ''
+    details = None
     if request.method == 'POST':
         pdf_file = request.files.get('signed_pdf')
-        if not pdf_file:
+        if not pdf_file or pdf_file.filename == '':
             result = False
-            message = 'Thiếu file PDF'
+            message = 'Vui lòng chọn một file PDF để xác minh.'
         else:
+            # Tạo thư mục tạm nếu chưa có
             os.makedirs("temp_uploads", exist_ok=True)
-            file_path = f"temp_uploads/{secure_filename(pdf_file.filename)}"
+            filename = secure_filename(pdf_file.filename)
+            file_path = os.path.join("temp_uploads", filename)
             pdf_file.save(file_path)
 
-            valid, reason = verify_pdf(file_path)
-            os.remove(file_path)
+            try:
+                # Gọi hàm xác minh từ verify.py
+                is_valid, reason, verification_details = verify_pdf(file_path)
+                # is_valid, reason = verify_pdf(file_path)
+                result = is_valid
+                message = reason
+                details = verification_details
+            except Exception as e:
+                result = False
+                message = f"Lỗi không xác định: {e}"
+            finally:
+                # Xóa file tạm sau khi xử lý xong
+                if os.path.exists(file_path):
+                    os.remove(file_path)
 
-            result = valid
-            message = reason
-
-    return render_template('verify.html', result=result, message=message)
+    return render_template('verify.html', result=result, message=message, details=details)
 
 
 if __name__ == "__main__":

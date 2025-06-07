@@ -8,6 +8,7 @@ import os
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.utils import ImageReader
+import hashlib
 
 
 def extract_private_key(pfx_path, passphrase):
@@ -46,15 +47,31 @@ def extract_public_key(cert_pem_bytes):
         raise RuntimeError(f"Failed to extract public key: {result.stderr.decode()}")
     return result.stdout.decode()
 
+def hash_pdf_content(pdf_path):
+    """
+    Tạo hash từ nội dung text và hình ảnh của file PDF.
+    Cách này ổn định hơn việc hash toàn bộ file.
+    """
+    reader = PdfReader(pdf_path)
+    hasher = hashlib.sha256()
+    
+    for page in reader.pages:
+        # Hash nội dung text của trang
+        hasher.update(page.extract_text().encode('utf-8'))
+
+            
+    return hasher.digest()
+
 def sign_pdf(pdf_path, private_key_pem_bytes):
     import hashlib, subprocess, os
+    digest = hash_pdf_content(pdf_path)
 
-    # 1. Đọc nội dung PDF
-    with open(pdf_path, 'rb') as f:
-        pdf_data = f.read()
+    # # 1. Đọc nội dung PDF
+    # with open(pdf_path, 'rb') as f:
+    #     pdf_data = f.read()
 
-    # 2. Băm SHA256
-    digest = hashlib.sha256(pdf_data).digest()
+    # # 2. Băm SHA256
+    # digest = hashlib.sha256(pdf_data).digest()
 
     # 3. Ghi hash ra file tạm
     hash_file = 'temp_hash.bin'
@@ -115,7 +132,7 @@ def draw_qr_on_pdf(original_pdf_path, qr_img, output_path):
 
     os.remove(qr_pdf_path)
 
-def embed_qrcode_and_metadata(pdf_path, qr_data, output_pdf_path, signer_name, signature_b64, public_key_pem):
+def embed_qrcode_and_metadata(pdf_path, qr_data, output_pdf_path, signer_name, signature_b64, public_key_pem, certificate_pem):
     # QR tạo từ qrcode lib
     qr = qrcode.QRCode(box_size=3, border=1)
     qr.add_data(qr_data)
@@ -143,6 +160,7 @@ def embed_qrcode_and_metadata(pdf_path, qr_data, output_pdf_path, signer_name, s
     metadata['/SignatureAlgorithm'] = 'mldsa65'
     metadata['/Signature'] = signature_b64
     metadata['/PublicKey'] = public_key_pem.strip()
+    metadata['/Certificate'] = certificate_pem.strip() 
 
     writer.add_metadata(metadata)
 
