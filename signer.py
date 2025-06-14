@@ -65,19 +65,9 @@ def hash_pdf_content(pdf_path):
             
     return hasher.digest()
 
-            
-#     return hasher.digest()
-
 def sign_pdf(pdf_path, private_key_pem_bytes):
     import hashlib, subprocess, os
     digest = hash_pdf_content(pdf_path)
-
-    # 1. Đọc nội dung PDF
-    # with open(pdf_path, 'rb') as f:
-    #     pdf_data = f.read()
-
-    # # 2. Băm SHA256
-    # digest = hashlib.sha256(pdf_data).digest()
 
     # 3. Ghi hash ra file tạm
     hash_file = 'temp_hash.bin'
@@ -116,10 +106,15 @@ def sign_pdf(pdf_path, private_key_pem_bytes):
     return signature, digest
 
 def draw_qr_on_pdf(original_pdf_path, qr_img, output_path):
+    # Chuyển đổi QR code PIL Image thành BytesIO để ImageReader có thể đọc
+    img_buffer = BytesIO()
+    qr_img.save(img_buffer, format='PNG')
+    img_buffer.seek(0)
+    
     # Tạo một PDF chứa QR code
     qr_pdf_path = "temp_qr_overlay.pdf"
     c = canvas.Canvas(qr_pdf_path, pagesize=letter)
-    img_reader = ImageReader(qr_img)
+    img_reader = ImageReader(img_buffer)
     c.drawImage(img_reader, 450, 50, width=100, height=100)  # vị trí (x=450, y=50)
     c.save()
 
@@ -138,63 +133,66 @@ def draw_qr_on_pdf(original_pdf_path, qr_img, output_path):
 
     os.remove(qr_pdf_path)
 
-def embed_qrcode_and_metadata(pdf_path, qr_data, output_pdf_path, signer_name, signature_b64, public_key_pem, certificate_pem, original_hash_b64):
-    # QR tạo từ qrcode lib
-    qr = qrcode.QRCode(box_size=3, border=1)
-    qr.add_data(qr_data)
+def embed_qrcode_with_signature_data(
+    pdf_path,
+    signer_name,
+    signature_b64,
+    public_key_pem,
+    certificate_pem,
+    original_hash_b64,
+    output_pdf_path,
+    file_id=None
+):
+    import json, urllib.parse
+    import uuid
+
+    # Tạo signature_id duy nhất để lưu thông tin đầy đủ trên server
+    signature_id = str(uuid.uuid4())
+    
+    # QR code chỉ chứa thông tin cơ bản
+    minimal_payload = {
+        "signature_id": signature_id,
+        "signer": signer_name,
+        "signature": signature_b64,
+        "certificate": certificate_pem.strip(),
+        "original_hash": original_hash_b64,
+        "algorithm": "mldsa65"
+    }
+    
+    if file_id:
+        minimal_payload["file_id"] = file_id
+
+    # Tạo URL verify ngắn gọn
+    json_data = json.dumps(minimal_payload, separators=(',', ':'))
+    encoded = urllib.parse.quote_plus(json_data)
+    qr_url = f"http://192.168.1.33:5001/verify?id={signature_id}"
+    
+    
+    # Tạo QR code nhỏ gọn
+    qr = qrcode.QRCode(
+        version=1,  # Version 1 là nhỏ nhất (21x21)
+        error_correction=qrcode.constants.ERROR_CORRECT_M,  # Cân bằng giữa kích thước và độ tin cậy
+        box_size=4,
+        border=2
+    )
+    
+    qr.add_data(qr_url)
     qr.make(fit=True)
     img = qr.make_image(fill_color="black", back_color="white")
-
-    # Lưu QR vào buffer để dùng
-    qr_buffer = BytesIO()
-    img.save(qr_buffer, format='PNG')
-    qr_buffer.seek(0)
-
-    qr_overlay_buffer = BytesIO()
-    c = canvas.Canvas(qr_overlay_buffer, pagesize=letter)
-    img_reader = ImageReader(qr_buffer)
-    c.drawImage(img_reader, 450, 50, width=100, height=100)
-    c.save()
-    qr_overlay_buffer.seek(0)
-
-    # Vẽ QR lên trang PDF
-    # draw_qr_on_pdf(pdf_path, qr_buffer, output_pdf_path)
-
-    # Thêm metadata
-    # reader = PdfReader(output_pdf_path)
-    # writer = PdfWriter()
-    reader_original = PdfReader(pdf_path)
-    reader_overlay = PdfReader(qr_overlay_buffer)
-    writer = PdfWriter()
-
-    # for page in reader.pages:
-    #     writer.add_page(page)
-    for i, page in enumerate(reader_original.pages):
-        # Nếu là trang đầu tiên, merge QR code vào
-        if i == 0:
-            page.merge_page(reader_overlay.pages[0])
-        # Thêm trang (đã hoặc chưa merge) vào writer
-        writer.add_page(page)
-
-    # metadata = dict(reader.metadata or {})
-    # metadata['/SignedBy'] = signer_name
-    # metadata['/SignedAt'] = datetime.utcnow().isoformat() + "Z"
-    # metadata['/SignatureAlgorithm'] = 'mldsa65'
-    # metadata['/Signature'] = signature_b64
-    # metadata['/PublicKey'] = public_key_pem.strip()
-    # metadata['/Certificate'] = certificate_pem.strip() 
-    metadata = {
-        '/SignedBy': signer_name,
-        '/SignedAt': datetime.utcnow().isoformat() + "Z",
-        '/SignatureAlgorithm': 'mldsa65',
-        '/Signature': signature_b64,
-        '/PublicKey': public_key_pem.strip(),
-        '/Certificate': certificate_pem.strip(),
-        '/OriginalHash': original_hash_b64
+    
+    draw_qr_on_pdf(pdf_path, img, output_pdf_path)
+    
+    # Trả về signature_id và thông tin đầy đủ để lưu vào database/server
+    full_signature_data = {
+        "signature_id": signature_id,
+        "signer": signer_name,
+        "signed_at": datetime.utcnow().isoformat() + "Z",
+        "algorithm": "mldsa65",
+        "signature": signature_b64,
+        "public_key": public_key_pem.strip(),
+        "certificate": certificate_pem.strip(),
+        "original_hash": original_hash_b64,
+        "file_id": file_id
     }
-
-    writer.add_metadata(metadata)
-
-    with open(output_pdf_path, "wb") as f_out:
-        writer.write(f_out)
-
+    
+    return signature_id, full_signature_data

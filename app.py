@@ -14,15 +14,15 @@ from crl import get_crl
 from middleware import ca_required, gov_required, login_required
 import glob
 from werkzeug.utils import secure_filename
-from signer import extract_private_key, extract_cert, extract_public_key, sign_pdf, embed_qrcode_and_metadata 
+from signer import extract_private_key, extract_cert, extract_public_key, sign_pdf, embed_qrcode_with_signature_data
 import base64
 from datetime import datetime
 from bson.objectid import ObjectId
-from PyPDF2 import PdfReader
+from pypdf import PdfReader, PdfWriter
 from cryptography import x509
 from cryptography.hazmat.primitives import serialization, hashes
 from cryptography.hazmat.primitives.asymmetric import padding
-from verify import verify_pdf
+from verify import verify_pdf, extract_qr_data_from_pdf, hash_pdf_content
 
 # Load .env file
 load_dotenv()
@@ -246,6 +246,7 @@ def cert_lookup_page():
         ca_cert_pem=ca_cert,  # Gán ca_cert_pem = ca_cert (PEM string)
         ca_cert_details=ca_cert_details
     )
+
 @app.route('/download-cert/<org_id>')
 @login_required
 def download_cert(org_id):
@@ -276,16 +277,16 @@ def sign_page():
             pfx_filename = secure_filename(pfx_file.filename)
 
             os.makedirs('storage/sign', exist_ok=True)
-            pdf_path = f'storage/sign/{filename}'
-            pfx_path = f'storage/sign/{pfx_filename}'
+            pdf_path = os.path.join('storage/sign', filename)
+            pfx_path = os.path.join('storage/sign', pfx_filename)
 
             pdf_file.save(pdf_path)
             pfx_file.save(pfx_path)
 
-            # Extract private key và cert tự ký
+            # Trích xuất private key từ file PFX
             private_key_pem = extract_private_key(pfx_path, passphrase)
 
-            # signature_bytes = sign_pdf(pdf_path, private_key_pem)
+            # Ký PDF
             signature_bytes, original_hash_bytes = sign_pdf(pdf_path, private_key_pem)
             signature_b64_str = base64.b64encode(signature_bytes).decode('utf-8')
             original_hash_b64_str = base64.b64encode(original_hash_bytes).decode('utf-8')
@@ -294,60 +295,58 @@ def sign_page():
                 cert_pem_bytes = f.read()
 
             cert_pem_str = cert_pem_bytes.decode('utf-8')
-
-            # Lấy public key từ cert
             public_key_pem = extract_public_key(cert_pem_bytes)
 
-            # Ký file PDF
-            # signature = sign_pdf(pdf_path, private_key_pem)
-            # signature_b64 = base64.b64encode(signature).decode()
-
-            # Tạo QR code dữ liệu: tên người ký + thời gian
-            # qr_data = f"Signer: {signer_name}\nDate: {datetime.utcnow().isoformat()}Z"
-
-            # signed_pdf_path = f'storage/sign/signed_{filename}'
-
+            # Tạo file đầu ra trước
             os.makedirs('storage/signed', exist_ok=True)
-            signed_pdf_path = os.path.join('storage/sign', f'signed_{filename}')
-            qr_data = f"Signer: {signer_name}\nDate: {datetime.utcnow().isoformat()}Z"
-            # signed_pdf_path = os.path.join('storage/sign', f'signed_{filename}')
-            # qr_data = f"Signer: {signer_name}\nDate: {datetime.utcnow().isoformat()}Z"
-            # embed_qrcode_and_metadata(pdf_path, qr_data, signed_pdf_path, signer_name, signature_b64_str, public_key_pem, cert_pem_str)
-            embed_qrcode_and_metadata(
-                pdf_path,  # Input là file gốc
-                qr_data,
-                signed_pdf_path, # Output là file mới
-                signer_name,
-                signature_b64_str,
-                public_key_pem,
-                cert_pem_str,
-                original_hash_b64_str
+            signed_pdf_path = os.path.join('storage/signed', f'signed_{filename}')
+
+            # Gọi hàm embed QR code và nhận về signature_id + full_data
+            signature_id, full_signature_data = embed_qrcode_with_signature_data(
+                pdf_path=pdf_path,
+                signer_name=signer_name,
+                signature_b64=signature_b64_str,
+                public_key_pem=public_key_pem,
+                certificate_pem=cert_pem_str,
+                original_hash_b64=original_hash_b64_str,
+                output_pdf_path=signed_pdf_path,
+                file_id=None  # Sẽ cập nhật sau
             )
 
-            # Lưu metadata vào MongoDB
-            db.signed_files.insert_one({
+            # Lưu thông tin vào database với signature_id
+            inserted = db.signed_files.insert_one({
+                'signature_id': signature_id,
                 'filename': f'signed_{filename}',
                 'original_filename': filename,
                 'signer': signer_name,
-                'ispublic': False,
                 'signed_time': datetime.utcnow(),
                 'signature_b64': signature_b64_str,
+                'original_hash_b64': original_hash_b64_str,
                 'public_key_pem': public_key_pem,
                 'certificate_pem': cert_pem_str,
-                'original_hash_b64': original_hash_b64_str
+                'ispublic': False
             })
+            file_id = str(inserted.inserted_id)
+
+            # Lưu thông tin signature đầy đủ vào collection riêng
+            db.signatures.insert_one({
+                'signature_id': signature_id,
+                'file_id': file_id,
+                **full_signature_data
+            })
+
             os.remove(pdf_path)
             os.remove(pfx_path)
 
-            return send_file(signed_pdf_path, as_attachment=True)
-
+            return redirect(url_for('signed_files_page'))
         except Exception as e:
-            flash(f"Error signing PDF: {e}", 'danger')
+            flash(f"Lỗi khi ký PDF: {e}", 'danger')
 
     return render_template('sign.html')
 
+
+
 @app.route('/docs/signed_files')
-@login_required
 def signed_files_page():
     files = list(db.signed_files.find().sort('signed_time', -1))  # Lấy mới nhất trước
     return render_template('signed_files.html', files=files)
@@ -355,7 +354,6 @@ def signed_files_page():
 from flask import send_from_directory
 
 @app.route('/docs/make_public/<file_id>', methods=['POST'])
-@login_required
 def make_file_public(file_id):
     db.signed_files.update_one(
         {'_id': ObjectId(file_id)},
@@ -363,11 +361,21 @@ def make_file_public(file_id):
     )
     return redirect(url_for('signed_files_page'))
 
+@app.route('/download/<filename>')
+def download_signed_pdf(filename):
+    record = db.signed_files.find_one({'filename': filename})
 
-@app.route('/docs/download/<filename>')
-@login_required
-def download_signed_file(filename):
-    return send_from_directory('storage/sign', filename, as_attachment=True)
+    if record and record.get('ispublic'):
+        filepath = os.path.join('storage/signed', filename)
+        if os.path.exists(filepath):
+            return send_file(filepath, as_attachment=True)
+        else:
+            return "File not found on server", 404
+    else:
+        return "File not found or not public", 404
+
+
+
 
 @app.route('/docs/public')
 @login_required 
@@ -375,9 +383,80 @@ def public_files_page():
     files = list(db.signed_files.find({'ispublic': True}).sort('signed_time', -1))
     return render_template('public_files.html', files=files)
 
+@app.route('/verify')
+def verify_from_qr():
+    signature_id = request.args.get('id')
+    if not signature_id:
+        return "Thiếu signature ID", 400
+    
+    try:
+        print(f"🔍 DEBUG: signature_id = {signature_id}")
+        
+        signature_data = db.signatures.find_one({'signature_id': signature_id})
+        if not signature_data:
+            return "Không tìm thấy thông tin chữ ký", 404
+                    
+        file_data = db.signed_files.find_one({'signature_id': signature_id})
+        verification_result = None
+        
+        if file_data and file_data.get('ispublic'):
+            filename = file_data.get('filename')
+            file_path = os.path.join('storage/signed', filename)
+            
+            
+            if os.path.exists(file_path):
+                try:
+                    qr_data = extract_qr_data_from_pdf(file_path)
+                    
+                    current_hash = hash_pdf_content(file_path)
+                    db_original_hash = base64.b64decode(signature_data['original_hash'])
+                
+                    is_valid, reason, details = verify_pdf(file_path)
+                    print(f"🔍 DEBUG: verify_pdf result: is_valid={is_valid}, reason={reason}")
+
+                    
+                    result = {
+                        'is_valid': is_valid,
+                        'reason': reason,
+                        'details': details
+                    }
+                except Exception as e:
+                    print(f"🔍 DEBUG: Exception during verification: {str(e)}")
+                    result = {
+                        'is_valid': False,
+                        'reason': f'Lỗi khi xác minh: {str(e)}',
+                        'details': {}
+                    }
+            else:
+                result = {
+                    'is_valid': False,
+                    'reason': 'File không tồn tại trên server.',
+                    'details': signature_data
+                }
+        else:
+            result = {
+                'is_valid': None,
+                'reason': 'File không public hoặc không tồn tại.',
+                'details': signature_data
+            }
+        
+        return render_template(
+            "verify.html",
+            signature_data=signature_data,
+            file_data=file_data,
+            result=result,
+            details=result['details'],
+            from_qr=True
+        )
+    except Exception as e:
+        print(f"🔍 DEBUG: Route exception: {str(e)}")
+        return f"Lỗi xác minh: {str(e)}", 500
+
+
+
+
 
 @app.route('/verify/upload', methods=['GET', 'POST'])
-@login_required
 def verify_page():
     result = None
     message = ''

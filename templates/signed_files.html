@@ -29,7 +29,7 @@
             <td>{{ f.signer }}</td>
             <td>{{ f.signed_time }}</td>
             <td>
-              <a href="{{ url_for('download_signed_file', filename=f.filename) }}"
+              <a href="{{ url_for('download_signed_pdf', filename=f.filename) }}"
                 class="btn btn-primary btn-sm">Download</a>
             </td>
             <td>
