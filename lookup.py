@@ -8,6 +8,8 @@ def get_cert_by_orgid(org_id):
     if cert:
         return {
             "org": cert.get("org"),
+            "org_name": cert.get("org_name"),
+            "position": cert.get("position"), 
             "status": cert.get("status", "UNKNOWN"),
             "issued_at": cert.get("issued_at"),
             "cert_data": cert.get("cert"),
@@ -16,6 +18,7 @@ def get_cert_by_orgid(org_id):
             "updated_at": cert.get("updated_at"),
         }
     return None
+
 
 def get_all_certs():
     certs = list(db.certificates.find({}, {'_id': 0}))

@@ -195,6 +195,7 @@ def verify_pdf(signed_pdf_path):
 
         details['signer'] = signature_data['signer']
         details['algorithm'] = signature_data['algorithm']
+        details['position'] = signature_data.get('position', '')
         
         # Parse signing time
         try:
@@ -345,7 +346,8 @@ def verify_pdf(signed_pdf_path):
         details['certificate'] = certificate_pem
         details['original_hash'] = base64.b64encode(original_hash).decode()  # for display purposes
         details['signature'] = signature_data['signature']  # base64 string for debugging (optional)
-
+        details['signer'] = signature_data.get('signer', '')
+        details['position'] = signature_data.get('position', '')
 
     except Exception as e:
         return False, f"An unexpected error occurred during verification: {str(e)}", details

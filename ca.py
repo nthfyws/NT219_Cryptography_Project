@@ -118,7 +118,21 @@ def sign_csr(org, passphrase):
         with open(cert_path, "rb") as f:
             cert_data = b64encode(f.read()).decode()
             
-        insert_cert(org, cert_path, cert_data)
+        user = db.users.find_one({"username": org})
+        display_name = user.get("display_name", org) if user else org
+        position = user.get("position", "") if user else ""
+
+        cert_doc = {
+            "org": org,
+            "org_name": display_name,
+            "position": position,
+            "cert": cert_data,
+            "status": "ACTIVE",
+            "path": cert_path,
+            "issued_at": datetime.utcnow(),
+            "updated_at": datetime.utcnow()
+        }
+        db.certificates.insert_one(cert_doc)
         log_operation("Sign CSR", org=org, success=True)
         return cert_data  # Trả về base64 string để render template
     except subprocess.CalledProcessError as e:

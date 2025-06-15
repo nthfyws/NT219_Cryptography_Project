@@ -266,7 +266,11 @@ def sign_page():
             pdf_file = request.files['pdf_file']
             pfx_file = request.files['pfx_file']
             passphrase = request.form['passphrase']
+
             signer_name = session.get('user', 'Unknown')
+            user_data = db.users.find_one({"username": signer_name})
+            display_name = user_data.get("display_name", signer_name)
+            position = user_data.get("position", "")
 
             cert_path = f'storage/certs/{signer_name}.crt'
             if not os.path.exists(cert_path):
@@ -304,13 +308,14 @@ def sign_page():
             # Gọi hàm embed QR code và nhận về signature_id + full_data
             signature_id, full_signature_data = embed_qrcode_with_signature_data(
                 pdf_path=pdf_path,
-                signer_name=signer_name,
+                signer_name=display_name,
+                signer_position=position,
                 signature_b64=signature_b64_str,
                 public_key_pem=public_key_pem,
                 certificate_pem=cert_pem_str,
                 original_hash_b64=original_hash_b64_str,
                 output_pdf_path=signed_pdf_path,
-                file_id=None  # Sẽ cập nhật sau
+                file_id=None
             )
 
             # Lưu thông tin vào database với signature_id
@@ -318,7 +323,8 @@ def sign_page():
                 'signature_id': signature_id,
                 'filename': f'signed_{filename}',
                 'original_filename': filename,
-                'signer': signer_name,
+                'signer': display_name,
+                'position': position,
                 'signed_time': datetime.utcnow(),
                 'signature_b64': signature_b64_str,
                 'original_hash_b64': original_hash_b64_str,
@@ -326,6 +332,7 @@ def sign_page():
                 'certificate_pem': cert_pem_str,
                 'ispublic': False
             })
+
             file_id = str(inserted.inserted_id)
 
             # Lưu thông tin signature đầy đủ vào collection riêng
@@ -374,9 +381,6 @@ def download_signed_pdf(filename):
     else:
         return "File not found or not public", 404
 
-
-
-
 @app.route('/docs/public')
 @login_required 
 def public_files_page():
@@ -414,7 +418,9 @@ def verify_from_qr():
                     is_valid, reason, details = verify_pdf(file_path)
                     print(f"🔍 DEBUG: verify_pdf result: is_valid={is_valid}, reason={reason}")
 
-                    
+                    details['signer'] = signature_data.get('signer')
+                    details['position'] = signature_data.get('position', '')
+
                     result = {
                         'is_valid': is_valid,
                         'reason': reason,
@@ -452,31 +458,54 @@ def verify_from_qr():
         print(f"🔍 DEBUG: Route exception: {str(e)}")
         return f"Lỗi xác minh: {str(e)}", 500
 
-
-
-
-
 @app.route('/verify/upload', methods=['GET', 'POST'])
 def verify_page():
     result = None
     message = ''
     details = None
+    users = list(db.users.find({"role": "Government"}, {'_id': 0, 'username': 1, 'display_name': 1}))
+
     if request.method == 'POST':
         pdf_file = request.files.get('signed_pdf')
+        selected_user = request.form.get('selected_user')
+        
         if not pdf_file or pdf_file.filename == '':
             result = False
             message = 'Please select a PDF file to verify.'
         else:
-            # Tạo thư mục tạm nếu chưa có
             os.makedirs("temp_uploads", exist_ok=True)
             filename = secure_filename(pdf_file.filename)
             file_path = os.path.join("temp_uploads", filename)
             pdf_file.save(file_path)
 
             try:
-                # Gọi hàm xác minh từ verify.py
+                # Bạn có thể dùng selected_user để thay đổi cách xác minh
                 is_valid, reason, verification_details = verify_pdf(file_path)
-                # is_valid, reason = verify_pdf(file_path)
+
+                # Truy xuất public key của người được chọn
+                selected_user_data = db.users.find_one({"username": selected_user})
+                selected_user_cert_path = f"storage/certs/{selected_user}.crt"
+
+                if selected_user_data and os.path.exists(selected_user_cert_path):
+                    with open(selected_user_cert_path, "rb") as f:
+                        cert_pem_bytes = f.read()
+
+                    selected_pubkey = extract_public_key(cert_pem_bytes).strip()
+                    actual_pubkey = verification_details.get("public_key", "").strip()
+                    actual_signer = verification_details.get("signer", "").strip()
+                    selected_display_name = selected_user_data.get("display_name", "").strip()
+
+                    # So sánh tên người ký & public key
+                    if selected_pubkey != actual_pubkey or selected_display_name != actual_signer:
+                        is_valid = False
+                        reason = "Người được chọn không phải là người ký thật sự trong tài liệu."
+                else:
+                    is_valid = False
+                    reason = "Không tìm thấy chứng chỉ hợp lệ cho người dùng được chọn."
+
+                verification_details['signer'] = verification_details.get('signer', '')
+                verification_details['position'] = verification_details.get('position', '')
+
                 result = is_valid
                 message = reason
                 details = verification_details
@@ -484,11 +513,10 @@ def verify_page():
                 result = False
                 message = f"An unknown error occurred: {e}"
             finally:
-                # Xóa file tạm sau khi xử lý xong
                 if os.path.exists(file_path):
                     os.remove(file_path)
 
-    return render_template('verify.html', result=result, message=message, details=details)
+    return render_template('verify.html', result=result, message=message, details=details, users=users)
 
 
 if __name__ == "__main__":

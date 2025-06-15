@@ -136,6 +136,7 @@ def draw_qr_on_pdf(original_pdf_path, qr_img, output_path):
 def embed_qrcode_with_signature_data(
     pdf_path,
     signer_name,
+    signer_position,
     signature_b64,
     public_key_pem,
     certificate_pem,
@@ -186,6 +187,7 @@ def embed_qrcode_with_signature_data(
     full_signature_data = {
         "signature_id": signature_id,
         "signer": signer_name,
+        "position": signer_position,
         "signed_at": datetime.utcnow().isoformat() + "Z",
         "algorithm": "mldsa65",
         "signature": signature_b64,

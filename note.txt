@@ -1,5 +1,0 @@
-export SSL_CERT_FILE=/home/nthuy/.local/lib/python3.10/site-packages/certifi/cacert.pem
-
-openssl genpkey -provider oqsprovider -provider default -algorithm mldsa65 -out fake.key
-openssl req -new -x509 -provider oqsprovider -provider default -key fake.key -out fake.crt -subj "/CN=Fake User"
-openssl pkcs12 -export -provider oqsprovider -provider default -out fake.pfx -inkey fake.key -in fake.crt -passout pass:123456

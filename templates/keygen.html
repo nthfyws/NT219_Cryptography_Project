@@ -1,37 +1,37 @@
 {% extends "base.html" %}
-{% block title %}Generate Key Pair{% endblock %}
+{% block title %}Tạo cặp khóa{% endblock %}
 
 {% block content %}
 <div class="card">
     <div class="card-header">
-        <h4>Generate Dilithium Key Pair</h4>
+        <h4>Tạo cặp khóa Dilithium</h4>
     </div>
     <div class="card-body">
         <form method="POST" action="{{ url_for('keygen_page') }}">
             {% if gov_passphrase_exists %}
                 <div class="alert alert-info mb-0">
-                    Your passphrase and key pair has already been created.
+                    Bạn đã tạo passphrase và cặp khóa trước đó.
                 </div>
                 <div class="mb-3">
-                    <label for="passphrase" class="form-label">Want to change your Passphrase and Keys?</label>
+                    <label for="passphrase" class="form-label">Muốn thay đổi Passphrase và khóa?</label>
                     <input type="password" class="form-control" id="passphrase" name="passphrase" minlength="12" required>
-                    <div class="form-text">Must be at least 12 characters long</div>
+                    <div class="form-text">Phải dài ít nhất 12 ký tự</div>
                 </div>
-                <button type="submit" class="btn btn-warning">Change Passphrase</button>
+                <button type="submit" class="btn btn-warning">Thay đổi Passphrase</button>
             {% else %}
                 <div class="mb-3">
-                    <label for="passphrase" class="form-label">Enter your Passphrase</label>
+                    <label for="passphrase" class="form-label">Nhập Passphrase của bạn</label>
                     <input type="password" class="form-control" id="passphrase" name="passphrase" minlength="12" required>
-                    <div class="form-text">Must be at least 12 characters long</div>
+                    <div class="form-text">Phải dài ít nhất 12 ký tự</div>
                 </div>
-                <button type="submit" class="btn btn-primary">Generate Key Pair</button>
+                <button type="submit" class="btn btn-primary">Tạo cặp khóa</button>
             {% endif %}
         </form>
 
         {% if pfx_file %}
         <div class="mt-3">
             <div class="alert alert-success">
-                Key pair generated successfully!
+                Tạo cặp khóa thành công!
             </div>
         </div>
         {% endif %}

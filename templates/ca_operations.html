@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}CA Operations{% endblock %}
+{% block title %}Chức năng CA{% endblock %}
 
 {% block content %}
 {% with messages = get_flashed_messages(with_categories=true) %}
@@ -9,65 +9,66 @@
     {% endfor %}
   {% endif %}
 {% endwith %}
+
 <div class="card">
     <div class="card-header">
-        <h4>Certificate Authority Operations</h4>
+        <h4>Chức năng của Tổ chức Chứng thực (CA)</h4>
     </div>
     <div class="card-body">
         <ul class="nav nav-tabs" id="caTabs" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="init-tab" data-bs-toggle="tab" data-bs-target="#init" type="button">Initialize CA</button>
+                <button class="nav-link active" id="init-tab" data-bs-toggle="tab" data-bs-target="#init" type="button">Khởi tạo CA</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="sign-tab" data-bs-toggle="tab" data-bs-target="#sign" type="button">Sign CSR</button>
+                <button class="nav-link" id="sign-tab" data-bs-toggle="tab" data-bs-target="#sign" type="button">Ký CSR</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="revoke-tab" data-bs-toggle="tab" data-bs-target="#revoke" type="button">Revoke Certificate</button>
+                <button class="nav-link" id="revoke-tab" data-bs-toggle="tab" data-bs-target="#revoke" type="button">Thu hồi chứng chỉ</button>
             </li>
         </ul>
         
         <div class="tab-content mt-3" id="caTabsContent">
-            <!-- Initialize CA -->
+            <!-- Khởi tạo CA -->
             <div class="tab-pane fade show active" id="init" role="tabpanel">
                 {% if ca_exists %}
                     <div class="alert alert-info mb-0">
-                        CA has already been initialized.
+                        CA đã được khởi tạo trước đó.
                     </div>
                 {% else %}
                 <form method="POST" action="{{ url_for('ca_operations_page') }}">
                     <input type="hidden" name="action" value="init_ca">
                     <div class="mb-3">
-                        <label for="caPassphrase" class="form-label">CA Passphrase</label>
+                        <label for="caPassphrase" class="form-label">Mật khẩu bảo vệ CA</label>
                         <input type="password" class="form-control" id="caPassphrase" name="passphrase" minlength="12" required>
-                        <div class="form-text">Must be at least 12 characters long</div>
+                        <div class="form-text">Mật khẩu phải có ít nhất 12 ký tự</div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Initialize CA</button>
+                    <button type="submit" class="btn btn-primary">Khởi tạo CA</button>
                 </form>
                 {% endif %}
             </div>
             
-            <!-- Sign CSR -->
+            <!-- Ký CSR -->
             <div class="tab-pane fade" id="sign" role="tabpanel">
                 <form method="POST" action="{{ url_for('ca_operations_page') }}">
                     <input type="hidden" name="action" value="sign_csr">
                     <div class="mb-3">
-                        <label for="signOrgInfo" class="form-label">Organization Information</label>
+                        <label for="signOrgInfo" class="form-label">ID tổ chức</label>
                         <input type="text" class="form-control" id="signOrgInfo" name="org_info" required>
                     </div>
                     <div class="mb-3">
-                        <label for="signPassphrase" class="form-label">CA Passphrase</label>
+                        <label for="signPassphrase" class="form-label">Mật khẩu CA</label>
                         <input type="password" class="form-control" id="signPassphrase" name="passphrase" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Sign CSR</button>
+                    <button type="submit" class="btn btn-primary">Ký CSR</button>
                 </form>
                 {% if pending_csrs %}
                 <div class="mt-4">
-                    <h5>Pending CSRs</h5>
+                    <h5>CSR đang chờ ký</h5>
                     <ul class="list-group">
                         {% for csr in pending_csrs %}
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             {{ csr }}
-                            <a href="{{ url_for('static', filename='csr/' ~ csr) }}" class="btn btn-sm btn-outline-primary" download>Download</a>
+                            <a href="{{ url_for('static', filename='csr/' ~ csr) }}" class="btn btn-sm btn-outline-primary" download>Tải xuống</a>
                         </li>
                         {% endfor %}
                     </ul>
@@ -76,12 +77,12 @@
 
                 {% if signed_csrs %}
                 <div class="mt-4">
-                    <h5>Signed CSRs</h5>
+                    <h5>CSR đã ký</h5>
                     <ul class="list-group">
                         {% for csr in signed_csrs %}
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             {{ csr }}
-                            <a href="{{ url_for('static', filename='csr/' ~ csr) }}" class="btn btn-sm btn-outline-primary" download>Download</a>
+                            <a href="{{ url_for('static', filename='csr/' ~ csr) }}" class="btn btn-sm btn-outline-primary" download>Tải xuống</a>
                         </li>
                         {% endfor %}
                     </ul>
@@ -89,42 +90,43 @@
                 {% endif %}
             </div>
             
-            <!-- Revoke Certificate -->
+            <!-- Thu hồi chứng chỉ -->
             <div class="tab-pane fade" id="revoke" role="tabpanel">
                 <form method="POST" action="{{ url_for('ca_operations_page') }}">
                     <input type="hidden" name="action" value="revoke_cert">
                     <div class="mb-3">
-                        <label for="revokeOrgInfo" class="form-label">Organization Information</label>
+                        <label for="revokeOrgInfo" class="form-label">ID tổ chức</label>
                         <input type="text" class="form-control" id="revokeOrgInfo" name="org_info" required>
                     </div>
                     <div class="mb-3">
-                        <label for="revokePassphrase" class="form-label">CA Passphrase</label>
+                        <label for="revokePassphrase" class="form-label">Mật khẩu CA</label>
                         <input type="password" class="form-control" id="revokePassphrase" name="passphrase" required>
                     </div>
                     <div class="mb-3">
-                        <label for="revokeReason" class="form-label">Revocation Reason</label>
+                        <label for="revokeReason" class="form-label">Lý do thu hồi</label>
                         <select class="form-select" id="revokeReason" name="reason">
-                            <option value="unspecified">Unspecified</option>
-                            <option value="keyCompromise">Key Compromise</option>
-                            <option value="affiliationChanged">Affiliation Changed</option>
-                            <option value="superseded">Superseded</option>
-                            <option value="cessationOfOperation">Cessation of Operation</option>
+                            <option value="unspecified">Không xác định</option>
+                            <option value="keyCompromise">Rò rỉ khóa</option>
+                            <option value="affiliationChanged">Thay đổi tổ chức</option>
+                            <option value="superseded">Bị thay thế</option>
+                            <option value="cessationOfOperation">Ngừng hoạt động</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-danger">Revoke Certificate</button>
+                    <button type="submit" class="btn btn-danger">Thu hồi chứng chỉ</button>
+
                     {% if active_certs %}
                     <div class="mt-4">
-                        <h5>Active Certificates</h5>
+                        <h5>Chứng chỉ đang hoạt động</h5>
                         <ul class="list-group">
                             {% for cert in active_certs %}
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 <span>
                                     <strong>{{ cert.org or cert.org_id }}</strong>
                                     {% if cert.issued_at %}
-                                        - Issued: {{ cert.issued_at.strftime('%d/%m/%Y %H:%M:%S') }}
+                                        - Cấp ngày: {{ cert.issued_at.strftime('%d/%m/%Y %H:%M:%S') }}
                                     {% endif %}
                                 </span>
-                                <a href="{{ url_for('download_cert', org_id=cert.org or cert.org_id) }}" class="btn btn-sm btn-success">Download Cert</a>
+                                <a href="{{ url_for('download_cert', org_id=cert.org or cert.org_id) }}" class="btn btn-sm btn-success">Tải chứng chỉ</a>
                             </li>
                             {% endfor %}
                         </ul>
@@ -138,7 +140,7 @@
 
 {% if cert_base64 %}
 <div class="mb-3">
-    <label class="form-label">Certificate (Base64):</label>
+    <label class="form-label">Chứng chỉ (dạng Base64):</label>
     <textarea class="form-control" rows="5" readonly>{{ cert_base64 }}</textarea>
 </div>
 {% endif %}

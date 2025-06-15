@@ -1,71 +1,73 @@
-  {% extends 'base.html' %}
+{% extends 'base.html' %}
 
-  {% block title %}Signed Files{% endblock %}
+{% block title %}Tài liệu đã ký{% endblock %}
 
-  {% block content %}
+{% block content %}
 
-  <div class="card">
-    <div class="card-header">
-      <h4>Signed Files</h4>
-    </div>
-    <div class="card-body">
-      <div class="mb-3">
-        <input type="text" id="searchInput" class="form-control form-control-sm w-100" placeholder="Search by filename...">
-      </div>
-      <table id="filesTable" class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Filename</th>
-            <th>Signer</th>
-            <th>Signed Time</th>
-            <th>Download</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for f in files %}
-          <tr>
-            <td class="filename-cell">{{ f.filename }}</td>
-            <td>{{ f.signer }}</td>
-            <td>{{ f.signed_time }}</td>
-            <td>
-              <a href="{{ url_for('download_signed_pdf', filename=f.filename) }}"
-                class="btn btn-primary btn-sm">Download</a>
-            </td>
-            <td>
-              {% if not f.ispublic %}
-              <form action="{{ url_for('make_file_public', file_id=f._id) }}" method="post" style="display:inline;">
-                <button type="submit" class="btn btn-warning btn-sm">Publish</button>
-              </form>
-              {% else %}
-              <span class="text-success">Published</span>
-              {% endif %}
-            </td>
-          </tr>
-          {% else %}
-          <tr>
-            <td colspan="5" class="text-center">No documents published yet.</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
+<div class="card">
+  <div class="card-header">
+    <h4>Danh sách tài liệu đã ký</h4>
   </div>
+  <div class="card-body">
+    <div class="mb-3">
+      <input type="text" id="searchInput" class="form-control form-control-sm w-100" placeholder="Tìm theo tên tệp...">
+    </div>
+    <table id="filesTable" class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Tên tệp</th>
+          <th>Người ký</th>
+          <th>Chức vụ</th>
+          <th>Thời gian ký</th>
+          <th>Tải xuống</th>
+          <th>Trạng thái</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for f in files %}
+        <tr>
+          <td class="filename-cell">{{ f.filename }}</td>
+          <td>{{ f.signer }}</td>
+          <td>{{ f.position }}</td>
+          <td>{{ f.signed_time.strftime('%d/%m/%Y %H:%M') if f.signed_time else 'Không rõ' }}</td>
+          <td>
+            <a href="{{ url_for('download_signed_pdf', filename=f.filename) }}"
+              class="btn btn-primary btn-sm">Tải về</a>
+          </td>
+          <td>
+            {% if not f.ispublic %}
+            <form action="{{ url_for('make_file_public', file_id=f._id) }}" method="post" style="display:inline;">
+              <button type="submit" class="btn btn-warning btn-sm">Công bố</button>
+            </form>
+            {% else %}
+            <span class="text-success">Đã công bố</span>
+            {% endif %}
+          </td>
+        </tr>
+        {% else %}
+        <tr>
+          <td colspan="6" class="text-center">Chưa có tài liệu nào được ký.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
 
-  <script>
-    document.getElementById('searchInput').addEventListener('keyup', function() {
-      const filter = this.value.toLowerCase();
-      const rows = document.querySelectorAll('#filesTable tbody tr');
+<script>
+  document.getElementById('searchInput').addEventListener('keyup', function () {
+    const filter = this.value.toLowerCase();
+    const rows = document.querySelectorAll('#filesTable tbody tr');
 
-      rows.forEach(row => {
-        const filename = row.querySelector('.filename-cell').textContent.toLowerCase();
-        if (filename.includes(filter)) {
-          row.style.display = '';
-        } else {
-          row.style.display = 'none';
-        }
-      });
+    rows.forEach(row => {
+      const filename = row.querySelector('.filename-cell').textContent.toLowerCase();
+      if (filename.includes(filter)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
     });
-  </script>
+  });
+</script>
 
-  {% endblock %}
+{% endblock %}

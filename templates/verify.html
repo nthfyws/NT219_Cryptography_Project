@@ -1,6 +1,5 @@
 {% extends "base.html" %}
-
-{% block title %}Verify Signed Document{% endblock %}
+{% block title %}Xác minh tài liệu{% endblock %}
 
 {% block content %}
 <div class="container mt-5">
@@ -8,101 +7,107 @@
         <div class="col-md-8">
 
             {% if result is none %}
-            <!-- FORM UPLOAD -->
             <div class="card">
                 <div class="card-header">
-                    <h3>Verify Signed Document</h3>
+                    <h4>Xác minh tài liệu đã ký</h4>
                 </div>
                 <div class="card-body">
-                    <p>Upload a digitally signed PDF file to check the validity of its signature.</p>
-
                     <form method="POST" enctype="multipart/form-data" action="{{ url_for('verify_page') }}">
                         <div class="mb-3">
-                            <label for="signed_pdf" class="form-label">Select Signed PDF File</label>
-                            <input class="form-control" type="file" id="signed_pdf" name="signed_pdf" accept=".pdf"
-                                required>
+                            <label for="signed_pdf" class="form-label">Tài liệu PDF</label>
+                            <input class="form-control" type="file" name="signed_pdf" accept=".pdf" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Verify</button>
+
+                        <div class="mb-3">
+                            <label for="selected_user" class="form-label">Người ký</label>
+                            <select class="form-select" name="selected_user" required>
+                                <option value="" disabled selected>-- Chọn người ký để xác minh --</option>
+                                {% for user in users %}
+                                <option value="{{ user.username }}">{{ user.display_name }} ({{ user.username }})</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Xác minh</button>
                     </form>
                 </div>
             </div>
             {% endif %}
 
             {% if result is not none %}
-            <!-- KẾT QUẢ XÁC MINH -->
             <div class="mt-4">
-                <h4>Verification Result:</h4>
+                <h5>Kết quả xác minh</h5>
 
-                {% if result.is_valid is sameas true %}
-                <div class="alert alert-success" role="alert">
-                    <h5 class="alert-heading"><i class="fas fa-check-circle"></i> Signature is valid!</h5>
-                    <p>{{ result.reason }}</p>
+                {% if result is sameas true %}
+                <div class="alert alert-success">
+                    <strong>Chữ ký hợp lệ.</strong> Tài liệu không bị thay đổi kể từ khi được ký và đúng với khóa công khai của người ký được chọn.
                 </div>
-                {% elif result.is_valid is sameas false %}
-                <div class="alert alert-danger" role="alert">
-                    <h5 class="alert-heading"><i class="fas fa-times-circle"></i> Signature is invalid!</h5>
-                    <p>{{ result.reason }}</p>
+                {% elif result is sameas false %}
+                <div class="alert alert-danger">
+                    <strong>Chữ ký không hợp lệ.</strong> Dữ liệu đã bị thay đổi hoặc không trùng khớp với người ký được chọn.
                 </div>
                 {% else %}
-                <div class="alert alert-warning" role="alert">
-                    <h5 class="alert-heading"><i class="fas fa-exclamation-circle"></i> Cannot verify signature</h5>
-                    <p>{{ result.reason }}</p>
+                <div class="alert alert-warning">
+                    <strong>Không thể xác minh chữ ký.</strong> Đã xảy ra lỗi trong quá trình xác minh hoặc thiếu thông tin cần thiết.
                 </div>
                 {% endif %}
 
-
-                {% if details %}
-                <!-- THÔNG TIN CHỮ KÝ -->
                 {% if details %}
                 <div class="card mt-3">
-                    <div class="card-header">
-                        Signature Information
-                    </div>
+                    <div class="card-header">Thông tin chữ ký</div>
                     <ul class="list-group list-group-flush">
-                        {% for key, value in details.items() %}
-                        {% if value and not key.startswith('cert_') and key != 'public_key' %}
-                        <li class="list-group-item">
-                            <strong>{{ key.replace('_', ' ').title() }}:</strong> {{ value }}
-                        </li>
+                        {% if details.signed_at %}
+                        <li class="list-group-item"><strong>Thời gian ký:</strong> {{ details.signed_at }}</li>
                         {% endif %}
-                        {% endfor %}
+                        {% if details.signer %}
+                        <li class="list-group-item"><strong>Người ký:</strong> {{ details.signer }}</li>
+                        {% endif %}
+                        {% if details.position %}
+                        <li class="list-group-item"><strong>Chức vụ:</strong> {{ details.position }}</li>
+                        {% endif %}
+                        {% if details.algorithm %}
+                        <li class="list-group-item"><strong>Thuật toán:</strong> {{ details.algorithm }}</li>
+                        {% endif %}
+                        {% if details.signature_id %}
+                        <li class="list-group-item"><strong>Mã chữ ký:</strong> {{ details.signature_id }}</li>
+                        {% endif %}
                     </ul>
                 </div>
 
-                <!-- THÔNG TIN CHỨNG THƯ -->
                 <div class="card mt-3">
-                    <div class="card-header">
-                        Certificate Information
-                    </div>
+                    <div class="card-header">Thông tin chứng chỉ</div>
                     <ul class="list-group list-group-flush">
-                        {% for key, value in details.items() %}
-                        {% if value and (key.startswith('cert_') or key == 'public_key') %}
+                        {% if details.cert_subject %}
+                        <li class="list-group-item"><strong>Chủ thể:</strong> {{ details.cert_subject }}</li>
+                        {% endif %}
+                        {% if details.cert_issuer %}
+                        <li class="list-group-item"><strong>Nhà phát hành:</strong> {{ details.cert_issuer }}</li>
+                        {% endif %}
+                        {% if details.cert_valid_from %}
+                        <li class="list-group-item"><strong>Hiệu lực từ:</strong> {{ details.cert_valid_from }}</li>
+                        {% endif %}
+                        {% if details.cert_valid_to %}
+                        <li class="list-group-item"><strong>Hiệu lực đến:</strong> {{ details.cert_valid_to }}</li>
+                        {% endif %}
+                        {% if details.public_key %}
                         <li class="list-group-item">
-                            <strong>{{ key.replace('_', ' ').title() }}:</strong><br>
-                            <pre style="white-space: pre-wrap;">{{ value }}</pre>
+                            <strong>Public Key:</strong>
+                            <pre class="mb-0" style="white-space: pre-wrap;">{{ details.public_key }}</pre>
                         </li>
                         {% endif %}
-                        {% endfor %}
                     </ul>
                 </div>
-                {% endif %}
-
                 {% endif %}
 
                 {% if file_url %}
-                <!-- LINK TẢI BẢN MỀM -->
                 <div class="mt-3">
-                    <a href="{{ file_url }}" class="btn btn-outline-secondary" target="_blank">
-                        📥 Download original signed PDF
-                    </a>
+                    <a href="{{ file_url }}" class="btn btn-secondary">Tải file gốc</a>
                 </div>
                 {% endif %}
 
-                <!-- NÚT QUAY LẠI -->
-                <div class="mt-4">
-                    <a href="{{ url_for('verify_page') }}" class="btn btn-link">🔁 Verify another file</a>
+                <div class="mt-3">
+                    <a href="{{ url_for('verify_page') }}" class="btn btn-outline-primary btn-sm mt-3">🔁 Kiểm tra file khác</a>
                 </div>
-            </div>
             {% endif %}
 
         </div>

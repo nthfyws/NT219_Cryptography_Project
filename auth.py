@@ -33,25 +33,29 @@ def login():
 def register():
     if request.method == 'GET':
         return render_template('register.html')
-    
+
     username = request.form.get('username')
     password = request.form.get('password')
-    
+    display_name = request.form.get('display_name')
+    position = request.form.get('position')
+
     if not username or not password:
         flash('Username and password are required', 'danger')
         return redirect(url_for('auth.register'))
-    
+
     if db.users.find_one({"username": username}):
         flash('Username already exists', 'danger')
         return redirect(url_for('auth.register'))
-    
+
     hashed_password = generate_password_hash(password)
     db.users.insert_one({
         "username": username,
         "password": hashed_password,
-        "role": "user"  # Mặc định là user, có thể nâng cấp sau
+        "role": "user",
+        "display_name": display_name,
+        "position": position
     })
-    
+
     flash('Registration successful! Please login.', 'success')
     return redirect(url_for('auth.login'))
 
