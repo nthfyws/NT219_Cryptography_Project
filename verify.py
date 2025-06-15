@@ -117,7 +117,7 @@ def verify_pdf(signed_pdf_path):
         os.remove(signer_cert_filepath) # Dọn dẹp file tạm
         
         if result.returncode != 0:
-            message = f"Certificate chain verification failed: The certificate was not signed by a trusted CA. Error: {result.stderr}"
+            message = f"Certificate chain verification failed: The certificate was not signed by a trusted CA."
             return False, message, details
 
         # Kiểm tra thời hạn của Certificate
