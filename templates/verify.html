@@ -6,66 +6,105 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
+
+            {% if result is none %}
+            <!-- FORM UPLOAD -->
             <div class="card">
                 <div class="card-header">
                     <h3>Verify Signed Document</h3>
                 </div>
                 <div class="card-body">
                     <p>Upload a digitally signed PDF file to check the validity of its signature.</p>
-                    
+
                     <form method="POST" enctype="multipart/form-data" action="{{ url_for('verify_page') }}">
                         <div class="mb-3">
                             <label for="signed_pdf" class="form-label">Select Signed PDF File</label>
-                            <input class="form-control" type="file" id="signed_pdf" name="signed_pdf" accept=".pdf" required>
+                            <input class="form-control" type="file" id="signed_pdf" name="signed_pdf" accept=".pdf"
+                                required>
                         </div>
                         <button type="submit" class="btn btn-primary">Verify</button>
                     </form>
                 </div>
             </div>
+            {% endif %}
 
             {% if result is not none %}
+            <!-- KẾT QUẢ XÁC MINH -->
             <div class="mt-4">
                 <h4>Verification Result:</h4>
-                {% if result %}
+
+                {% if result.is_valid is sameas true %}
                 <div class="alert alert-success" role="alert">
-                    <h5 class="alert-heading"><i class="fas fa-check-circle"></i> Valid!</h5>
-                    <p>{{ message }}</p>
+                    <h5 class="alert-heading"><i class="fas fa-check-circle"></i> Signature is valid!</h5>
+                    <p>{{ result.reason }}</p>
+                </div>
+                {% elif result.is_valid is sameas false %}
+                <div class="alert alert-danger" role="alert">
+                    <h5 class="alert-heading"><i class="fas fa-times-circle"></i> Signature is invalid!</h5>
+                    <p>{{ result.reason }}</p>
                 </div>
                 {% else %}
-                <div class="alert alert-danger" role="alert">
-                    <h5 class="alert-heading"><i class="fas fa-times-circle"></i> Invalid!</h5>
-                    <p>{{ message }}</p>
+                <div class="alert alert-warning" role="alert">
+                    <h5 class="alert-heading"><i class="fas fa-exclamation-circle"></i> Cannot verify signature</h5>
+                    <p>{{ result.reason }}</p>
                 </div>
                 {% endif %}
 
-                <!-- HIỂN THỊ THÔNG TIN CHI TIẾT -->
+
+                {% if details %}
+                <!-- THÔNG TIN CHỮ KÝ -->
                 {% if details %}
                 <div class="card mt-3">
                     <div class="card-header">
                         Signature Information
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><strong>Signer:</strong> {{ details.signer }}</li>
-                        <li class="list-group-item"><strong>Signed At:</strong> {{ details.signed_at }}</li>
-                        <li class="list-group-item"><strong>Algorithm:</strong> {{ details.algorithm }}</li>
+                        {% for key, value in details.items() %}
+                        {% if value and not key.startswith('cert_') and key != 'public_key' %}
+                        <li class="list-group-item">
+                            <strong>{{ key.replace('_', ' ').title() }}:</strong> {{ value }}
+                        </li>
+                        {% endif %}
+                        {% endfor %}
                     </ul>
                 </div>
+
+                <!-- THÔNG TIN CHỨNG THƯ -->
                 <div class="card mt-3">
                     <div class="card-header">
                         Certificate Information
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><strong>Subject:</strong> {{ details.cert_subject }}</li>
-                        <li class="list-group-item"><strong>Issuer:</strong> {{ details.cert_issuer }}</li>
-                        <li class="list-group-item"><strong>Valid from:</strong> {{ details.cert_valid_from }}</li>
-                        <li class="list-group-item"><strong>Valid to:</strong> {{ details.cert_valid_to }}</li>
+                        {% for key, value in details.items() %}
+                        {% if value and (key.startswith('cert_') or key == 'public_key') %}
+                        <li class="list-group-item">
+                            <strong>{{ key.replace('_', ' ').title() }}:</strong><br>
+                            <pre style="white-space: pre-wrap;">{{ value }}</pre>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
                     </ul>
                 </div>
                 {% endif %}
-                <!-- KẾT THÚC PHẦN HIỂN THỊ -->
+
+                {% endif %}
+
+                {% if file_url %}
+                <!-- LINK TẢI BẢN MỀM -->
+                <div class="mt-3">
+                    <a href="{{ file_url }}" class="btn btn-outline-secondary" target="_blank">
+                        📥 Download original signed PDF
+                    </a>
+                </div>
+                {% endif %}
+
+                <!-- NÚT QUAY LẠI -->
+                <div class="mt-4">
+                    <a href="{{ url_for('verify_page') }}" class="btn btn-link">🔁 Verify another file</a>
+                </div>
             </div>
             {% endif %}
-            
+
         </div>
     </div>
 </div>
