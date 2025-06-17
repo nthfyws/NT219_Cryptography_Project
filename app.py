@@ -22,7 +22,8 @@ from pypdf import PdfReader, PdfWriter
 from cryptography import x509
 from cryptography.hazmat.primitives import serialization, hashes
 from cryptography.hazmat.primitives.asymmetric import padding
-from verify import verify_pdf, extract_qr_data_from_pdf, hash_pdf_content
+from verify import verify_pdf, extract_qr_data_from_pdf
+import shutil
 
 # Load .env file
 load_dotenv()
@@ -257,6 +258,7 @@ def download_cert(org_id):
         flash('Certificate file not found.', 'danger')
         return redirect(request.referrer or url_for('cert_lookup_page'))
     
+
 @app.route('/docs/sign', methods=['GET', 'POST'])
 @login_required  
 @gov_required   
@@ -274,7 +276,7 @@ def sign_page():
 
             cert_path = f'storage/certs/{signer_name}.crt'
             if not os.path.exists(cert_path):
-                flash(f"Không tìm thấy chứng chỉ đã được CA cấp cho '{signer_name}'. Vui lòng yêu cầu CA cấp chứng chỉ trước.", 'danger')
+                flash(f"Không tìm thấy chứng chỉ đã được CA cấp cho '{signer_name}'.", 'danger')
                 return render_template('sign.html')
 
             filename = secure_filename(pdf_file.filename)
@@ -287,47 +289,37 @@ def sign_page():
             pdf_file.save(pdf_path)
             pfx_file.save(pfx_path)
 
-            # Trích xuất private key từ file PFX
+            # B1. Trích xuất khóa và chứng chỉ
             private_key_pem = extract_private_key(pfx_path, passphrase)
-
-            # Ký PDF
-            signature_bytes, original_hash_bytes = sign_pdf(pdf_path, private_key_pem)
-            signature_b64_str = base64.b64encode(signature_bytes).decode('utf-8')
-            original_hash_b64_str = base64.b64encode(original_hash_bytes).decode('utf-8')
-
             with open(cert_path, 'rb') as f:
                 cert_pem_bytes = f.read()
-
             cert_pem_str = cert_pem_bytes.decode('utf-8')
             public_key_pem = extract_public_key(cert_pem_bytes)
 
-            # Tạo file đầu ra trước
+            # B2. Tạo thư mục lưu file ký
             os.makedirs('storage/signed', exist_ok=True)
             signed_pdf_path = os.path.join('storage/signed', f'signed_{filename}')
 
-            # Gọi hàm embed QR code và nhận về signature_id + full_data
+            # B3. Nhúng QR vào PDF gốc và ký file đã có QR
             signature_id, full_signature_data = embed_qrcode_with_signature_data(
-                pdf_path=pdf_path,
+                pdf_path=pdf_path,  # file gốc
                 signer_name=display_name,
                 signer_position=position,
-                signature_b64=signature_b64_str,
+                private_key_pem=private_key_pem,
                 public_key_pem=public_key_pem,
                 certificate_pem=cert_pem_str,
-                original_hash_b64=original_hash_b64_str,
-                output_pdf_path=signed_pdf_path,
-                file_id=None
+                output_pdf_path=signed_pdf_path
             )
 
-            # Lưu thông tin vào database với signature_id
+            # B4. Lưu thông tin file vào database
             inserted = db.signed_files.insert_one({
                 'signature_id': signature_id,
-                'filename': f'signed_{filename}',
+                'filename': os.path.basename(signed_pdf_path),   # bản đã ký
                 'original_filename': filename,
                 'signer': display_name,
                 'position': position,
                 'signed_time': datetime.utcnow(),
-                'signature_b64': signature_b64_str,
-                'original_hash_b64': original_hash_b64_str,
+                'signature_b64': full_signature_data['signature'],
                 'public_key_pem': public_key_pem,
                 'certificate_pem': cert_pem_str,
                 'ispublic': False
@@ -335,24 +327,22 @@ def sign_page():
 
             file_id = str(inserted.inserted_id)
 
-            # Lưu thông tin signature đầy đủ vào collection riêng
-            db.signatures.insert_one({
-                'signature_id': signature_id,
-                'file_id': file_id,
-                **full_signature_data
-            })
+            # B5. Ghi thêm file_id vào metadata và lưu vào collection `signatures`
+            full_signature_data['file_id'] = file_id
+            db.signatures.insert_one(full_signature_data)
 
+            # B6. Xoá file tạm
             os.remove(pdf_path)
             os.remove(pfx_path)
 
             return redirect(url_for('signed_files_page'))
+
         except Exception as e:
             flash(f"Lỗi khi ký PDF: {e}", 'danger')
 
     return render_template('sign.html')
 
-
-
+    
 @app.route('/docs/signed_files')
 def signed_files_page():
     files = list(db.signed_files.find().sort('signed_time', -1))  # Lấy mới nhất trước
@@ -392,102 +382,109 @@ def verify_from_qr():
     signature_id = request.args.get('id')
     if not signature_id:
         return "Thiếu signature ID", 400
-    
+
     try:
-        print(f"🔍 DEBUG: signature_id = {signature_id}")
-        
         signature_data = db.signatures.find_one({'signature_id': signature_id})
         if not signature_data:
             return "Không tìm thấy thông tin chữ ký", 404
-                    
+
         file_data = db.signed_files.find_one({'signature_id': signature_id})
-        verification_result = None
-        
-        if file_data and file_data.get('ispublic'):
-            filename = file_data.get('filename')
-            file_path = os.path.join('storage/signed', filename)
-            
-            
-            if os.path.exists(file_path):
-                try:
-                    qr_data = extract_qr_data_from_pdf(file_path)
-                    
-                    current_hash = hash_pdf_content(file_path)
-                    db_original_hash = base64.b64decode(signature_data['original_hash'])
-                
-                    is_valid, reason, details = verify_pdf(file_path)
-                    print(f"🔍 DEBUG: verify_pdf result: is_valid={is_valid}, reason={reason}")
+        if not file_data:
+            return "Không tìm thấy file đã ký", 404
 
-                    details['signer'] = signature_data.get('signer')
-                    details['position'] = signature_data.get('position', '')
+        result = None 
+        result_reason = ""
+        result_details = {}
 
-                    result = {
-                        'is_valid': is_valid,
-                        'reason': reason,
-                        'details': details
-                    }
-                except Exception as e:
-                    print(f"🔍 DEBUG: Exception during verification: {str(e)}")
-                    result = {
-                        'is_valid': False,
-                        'reason': f'Lỗi khi xác minh: {str(e)}',
-                        'details': {}
-                    }
+        if file_data.get('ispublic'):
+            signed_file_with_qr = file_data.get("filename")
+
+            if signed_file_with_qr:
+                file_path = os.path.join("storage/signed", signed_file_with_qr)
+
+                if os.path.exists(file_path):
+                    try:
+                        is_valid, reason, details = verify_pdf(file_path)
+
+                        # Bổ sung thông tin người ký từ DB
+                        details['signer'] = signature_data.get('signer', '')
+                        details['position'] = signature_data.get('position', '')
+
+                        result = is_valid  # boolean True/False
+                        result_reason = reason
+                        result_details = details
+                    except Exception as e:
+                        result = False
+                        result_reason = f'Lỗi khi xác minh: {str(e)}'
+                        result_details = {}
+                else:
+                    result = False
+                    result_reason = 'Không tìm thấy file đã ký trên máy chủ.'
+                    result_details = signature_data
             else:
-                result = {
-                    'is_valid': False,
-                    'reason': 'File không tồn tại trên server.',
-                    'details': signature_data
-                }
+                result = False
+                result_reason = 'Không có tên file đã ký (signed_filename).'
+                result_details = signature_data
         else:
-            result = {
-                'is_valid': None,
-                'reason': 'File không public hoặc không tồn tại.',
-                'details': signature_data
-            }
-        
+            result = None
+            result_reason = 'File không public hoặc không tồn tại.'
+            result_details = signature_data
+
+        filename_for_download = file_data.get('filename')
+        file_url = url_for('download_signed_pdf', filename=filename_for_download) if filename_for_download else None
+
         return render_template(
             "verify.html",
             signature_data=signature_data,
             file_data=file_data,
-            result=result,
-            details=result['details'],
-            from_qr=True
+            result=result,                 
+            reason=result_reason,
+            details=result_details,       
+            from_qr=True,
+            file_url=file_url
         )
+
     except Exception as e:
         print(f"🔍 DEBUG: Route exception: {str(e)}")
         return f"Lỗi xác minh: {str(e)}", 500
+
+
 
 @app.route('/verify/upload', methods=['GET', 'POST'])
 def verify_page():
     result = None
     message = ''
     details = None
+    file_url = None
     users = list(db.users.find({"role": "Government"}, {'_id': 0, 'username': 1, 'display_name': 1}))
 
     if request.method == 'POST':
         pdf_file = request.files.get('signed_pdf')
         selected_user = request.form.get('selected_user')
-        
+
         if not pdf_file or pdf_file.filename == '':
             result = False
-            message = 'Please select a PDF file to verify.'
+            message = 'Vui lòng chọn tệp PDF cần xác minh.'
         else:
             os.makedirs("temp_uploads", exist_ok=True)
             filename = secure_filename(pdf_file.filename)
-            file_path = os.path.join("temp_uploads", filename)
-            pdf_file.save(file_path)
+            uploaded_path = os.path.join("temp_uploads", filename)
+            pdf_file.save(uploaded_path)
 
             try:
-                # Bạn có thể dùng selected_user để thay đổi cách xác minh
-                is_valid, reason, verification_details = verify_pdf(file_path)
+                is_valid, reason, verification_details = verify_pdf(uploaded_path)
+                signature_id = verification_details.get("signature_id")
+                file_record = db.signed_files.find_one({"signature_id": signature_id, "ispublic": True})
 
-                # Truy xuất public key của người được chọn
+                if file_record:
+                    signed_filename = file_record.get("filename")
+                    file_url = url_for("download_signed_pdf", filename=signed_filename)
+
                 selected_user_data = db.users.find_one({"username": selected_user})
-                selected_user_cert_path = f"storage/certs/{selected_user}.crt"
+                selected_cert_path = f"storage/certs/{selected_user}.crt"
 
-                if selected_user_data and os.path.exists(selected_user_cert_path):
-                    with open(selected_user_cert_path, "rb") as f:
+                if selected_user_data and os.path.exists(selected_cert_path):
+                    with open(selected_cert_path, "rb") as f:
                         cert_pem_bytes = f.read()
 
                     selected_pubkey = extract_public_key(cert_pem_bytes).strip()
@@ -495,7 +492,6 @@ def verify_page():
                     actual_signer = verification_details.get("signer", "").strip()
                     selected_display_name = selected_user_data.get("display_name", "").strip()
 
-                    # So sánh tên người ký & public key
                     if selected_pubkey != actual_pubkey or selected_display_name != actual_signer:
                         is_valid = False
                         reason = "Người được chọn không phải là người ký thật sự trong tài liệu."
@@ -503,20 +499,27 @@ def verify_page():
                     is_valid = False
                     reason = "Không tìm thấy chứng chỉ hợp lệ cho người dùng được chọn."
 
-                verification_details['signer'] = verification_details.get('signer', '')
-                verification_details['position'] = verification_details.get('position', '')
-
                 result = is_valid
                 message = reason
                 details = verification_details
+
             except Exception as e:
                 result = False
-                message = f"An unknown error occurred: {e}"
+                message = f"Lỗi khi xác minh: {e}"
             finally:
-                if os.path.exists(file_path):
-                    os.remove(file_path)
+                if os.path.exists(uploaded_path):
+                    os.remove(uploaded_path)
 
-    return render_template('verify.html', result=result, message=message, details=details, users=users)
+    return render_template(
+        'verify.html',
+        result=result,
+        message=message,
+        details=details,
+        users=users,
+        file_url=file_url
+    )
+
+
 
 
 if __name__ == "__main__":
